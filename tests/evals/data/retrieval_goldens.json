@@ -1,0 +1,14 @@
+[
+    {
+      "name": "maintenance_retrieval_001",
+      "input": "扫地机器人怎么维护？",
+      "expected_output": "检索结果应覆盖清洁滚刷、清空尘盒、滤网检查、传感器维护等内容。",
+      "limit": 5
+    },
+    {
+      "name": "troubleshooting_retrieval_001",
+      "input": "知识库里有没有故障排除相关内容？",
+      "expected_output": "检索结果应包含故障排除、异常处理或常见问题解决相关内容。",
+      "limit": 5
+    }
+]

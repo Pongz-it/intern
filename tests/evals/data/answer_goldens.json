@@ -1,0 +1,12 @@
+[
+    {
+      "name": "robot_maintenance_001",
+      "input": "扫地机器人怎么维护？",
+      "expected_output": "回答应提到清洁滚刷、清空尘盒、检查滤网等维护建议。"
+    },
+    {
+      "name": "troubleshooting_001",
+      "input": "知识库里有没有故障排除相关内容？",
+      "expected_output": "回答应明确说明是否存在相关内容，并简要概括故障排除主题。"
+    }
+]

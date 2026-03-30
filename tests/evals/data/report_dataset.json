@@ -1,0 +1,22 @@
+[
+  {
+    "name": "MAINTENANCE-001",
+    "tier": "sample",
+    "category": "MAINTENANCE",
+    "case_type": "knowledge_qa",
+    "folder": "default",
+    "limit": 5,
+    "input": "扫地机器人怎么维护？",
+    "expected_output": "回答应覆盖清洁滚刷、清空尘盒、滤网检查、传感器维护或类似维护建议。"
+  },
+  {
+    "name": "TROUBLESHOOTING-001",
+    "tier": "sample",
+    "category": "TROUBLESHOOTING",
+    "case_type": "knowledge_qa",
+    "folder": "default",
+    "limit": 5,
+    "input": "知识库里有没有故障排除相关内容？",
+    "expected_output": "回答应明确说明是否存在故障排除相关内容，并概括相关主题或文档。"
+  }
+]

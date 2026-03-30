@@ -1,0 +1,1002 @@
+[
+  {
+    "name": "BASIC-USE-001",
+    "tier": "15",
+    "category": "BASIC-USE",
+    "case_type": "procedure",
+    "folder": "default",
+    "limit": 5,
+    "input": "扫地机器人首次使用需要做什么？",
+    "expected_output": "回答应提到拆除包装配件、先充满电、在空旷环境下首次建图，建图完成后再设置清扫区域和禁区。"
+  },
+  {
+    "name": "BASIC-USE-002",
+    "tier": "15",
+    "category": "BASIC-USE",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "APP连不上机器人怎么排查？",
+    "expected_output": "回答应提到手机和机器人需连接同一 2.4G WiFi、不支持 5G，必要时重启机器人和路由器并在 APP 中重新添加设备。"
+  },
+  {
+    "name": "BASIC-USE-003",
+    "tier": "15",
+    "category": "BASIC-USE",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "机器人总是找不到充电座，应该怎么处理？",
+    "expected_output": "回答应提到清理充电座周围障碍物，保证充电座前方约 3 米、左右约 1 米无遮挡，并可将机器人放回充电座附近后重新尝试回充。"
+  },
+  {
+    "name": "CLEANING-001",
+    "tier": "15",
+    "category": "CLEANING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "拖地后地面有明显水渍和水痕怎么办？",
+    "expected_output": "回答应提到调小出水量、更换或清洗干净拖布，并可切换到干拖或低速拖地，避免机器人在同一区域反复停留。"
+  },
+  {
+    "name": "CLEANING-002",
+    "tier": "15",
+    "category": "CLEANING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "家里有宠物，机器人老是漏掉毛发，怎么改善？",
+    "expected_output": "回答应提到清理主刷缠绕毛发、必要时更换宠物专用防缠绕主刷，并把吸力调高或开启毛发清理模式。"
+  },
+  {
+    "name": "CONSUMABLES-001",
+    "tier": "15",
+    "category": "CONSUMABLES",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "HEPA滤网能不能洗？多久需要更换？",
+    "expected_output": "回答应说明 HEPA 滤网可定期清洗并阴凉晾干、不可暴晒，同时应提到大致更换周期约为 3 到 6 个月。"
+  },
+  {
+    "name": "TROUBLESHOOTING-001",
+    "tier": "15",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "机器人开机后立刻自动关机，常见原因是什么？",
+    "expected_output": "回答应提到电池电量耗尽、机身过热或电池鼓包等可能原因，并给出充电、冷却或更换电池等处理方向。"
+  },
+  {
+    "name": "TROUBLESHOOTING-002",
+    "tier": "15",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "机器人清扫时总是频繁撞家具，应该重点检查什么？",
+    "expected_output": "回答应提到清洁避障摄像头或传感器、防撞条是否卡顿或回弹异常，并可配合清理周围障碍物。"
+  },
+  {
+    "name": "ALARM-001",
+    "tier": "15",
+    "category": "ALARM",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "出现“电池故障”报警时应该怎么处理？",
+    "expected_output": "回答应提到先关闭电源并重新插拔电池，如果仍然报警，应联系售后检测或更换电池。"
+  },
+  {
+    "name": "MOPPING-001",
+    "tier": "15",
+    "category": "MOPPING",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "水箱里加清洁液应该怎么配比？",
+    "expected_output": "回答应说明优先使用机型专用清洁液，并按大约 1:100 与清水混合，不应直接加入高浓度清洁液。"
+  },
+  {
+    "name": "MOPPING-002",
+    "tier": "15",
+    "category": "MOPPING",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "我不想让机器人在地毯上拖地，应该怎么设置？",
+    "expected_output": "回答应提到可在 APP 中把地毯区域设置为禁拖区，或依赖拖布抬升功能，使机器人在地毯区域只扫不拖。"
+  },
+  {
+    "name": "MAINTENANCE-001",
+    "tier": "15",
+    "category": "MAINTENANCE",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "机器人如果要长期存放，应该怎么保养？",
+    "expected_output": "回答应提到存放前清洁机身和配件、扫拖机型需排空水箱，电池保留约 80% 到 90% 电量，放在阴凉干燥处，并定期补电。"
+  },
+  {
+    "name": "MAINTENANCE-002",
+    "tier": "15",
+    "category": "MAINTENANCE",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "清洁机器人时能不能直接用水冲洗机身？",
+    "expected_output": "回答应明确说明不能直接冲洗或浸泡机身，清洁时应断电并用干布或微湿软布擦拭。"
+  },
+  {
+    "name": "BUYING-001",
+    "tier": "15",
+    "category": "BUYING",
+    "case_type": "comparison",
+    "folder": "default",
+    "limit": 5,
+    "input": "带宠物的家庭选扫地机器人，应该优先看哪些能力？",
+    "expected_output": "回答应提到更强吸力、防毛发缠绕主刷或宠物模式，并可提及除味、避障能力或宠物家庭耗材更换频率更高。"
+  },
+  {
+    "name": "BUYING-002",
+    "tier": "15",
+    "category": "BUYING",
+    "case_type": "comparison",
+    "folder": "default",
+    "limit": 5,
+    "input": "家里既有木地板又有地毯，选扫拖机器人要看什么配置？",
+    "expected_output": "回答应提到木地板需要可调低出水量或拖布抬升，地毯场景需要更强吸力或地毯增压，并兼顾越障和地面适配能力。"
+  },
+  {
+    "name": "BUYING-003",
+    "tier": "full",
+    "category": "BUYING",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "小户型和大户型分别建议多少续航？",
+    "expected_output": "回答应提到小户型约 80 平米以内建议至少 60 分钟续航，大户型约 120 平米以上建议至少 120 分钟，并可提及断点续扫更实用。"
+  },
+  {
+    "name": "BUYING-004",
+    "tier": "full",
+    "category": "BUYING",
+    "case_type": "comparison",
+    "folder": "default",
+    "limit": 5,
+    "input": "3D结构光避障和红外避障有什么差别？",
+    "expected_output": "回答应说明 3D 结构光识别精度更高、对细小障碍物更友好，而红外避障能力相对弱一些。"
+  },
+  {
+    "name": "BUYING-005",
+    "tier": "full",
+    "category": "BUYING",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "如果床底或沙发底高度只有8厘米，机身高度应该选多少？",
+    "expected_output": "回答应提到机身高度最好不高于约 7.5 厘米，以确保能进入低矮家具底部。"
+  },
+  {
+    "name": "BUYING-006",
+    "tier": "full",
+    "category": "BUYING",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "过敏体质家庭选过滤系统时，滤网等级有什么建议？",
+    "expected_output": "回答应提到优先考虑 HEPA H13 或同等级高效过滤系统，用于过滤细小灰尘和过敏原。"
+  },
+  {
+    "name": "FUNCTION-001",
+    "tier": "full",
+    "category": "FUNCTION",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "怎么设置定时清扫？",
+    "expected_output": "回答应提到在 APP 的清扫设置或定时清扫入口里设置时间、区域和频次，保存后机器人会自动执行。"
+  },
+  {
+    "name": "FUNCTION-002",
+    "tier": "full",
+    "category": "FUNCTION",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "明明设置了禁区，机器人还是会进去，怎么排查？",
+    "expected_output": "回答应提到检查禁区边界是否准确，重新调整并保存禁区范围，必要时重新识别地图或确认未开启禁区临时取消。"
+  },
+  {
+    "name": "CLEANING-003",
+    "tier": "full",
+    "category": "CLEANING",
+    "case_type": "multi_step",
+    "folder": "default",
+    "limit": 5,
+    "input": "厨房地面有比较重的油污，机器人拖不干净时应该怎么处理？",
+    "expected_output": "回答应提到先用较大吸力清理表面杂物，再配合专用清洁液和较高出水量、多次拖扫，必要时对顽固油污先做手动预处理。"
+  },
+  {
+    "name": "CLEANING-004",
+    "tier": "full",
+    "category": "CLEANING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "地毯上的灰尘总清不彻底，知识库里建议怎么做？",
+    "expected_output": "回答应提到开启或确认支持地毯增压功能、将吸力调高，并在清扫前先清理地毯表面杂物，避免机器人打滑。"
+  },
+  {
+    "name": "MOPPING-003",
+    "tier": "full",
+    "category": "MOPPING",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "拖布洗完还是有味道，怎么处理比较好？",
+    "expected_output": "回答应提到用温水加中性洗涤剂浸泡后刷洗、充分晾干，并可定期消毒以避免发霉和异味。"
+  },
+  {
+    "name": "TROUBLESHOOTING-003",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "机器人一开机就回充，这通常说明什么？",
+    "expected_output": "回答应提到若电量低于约 20% 会优先回充；若电量充足，则可重启设备并重置清扫模式。"
+  },
+  {
+    "name": "TROUBLESHOOTING-004",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "出现“传感器异常”报警时，知识库建议先怎么做？",
+    "expected_output": "回答应提到先用干软布擦拭机身前方和底部传感器，清理灰尘或水渍遮挡，之后再重启设备。"
+  },
+  {
+    "name": "MULTI-STEP-001",
+    "tier": "full",
+    "category": "MULTI-STEP",
+    "case_type": "multi_step",
+    "folder": "default",
+    "limit": 5,
+    "input": "大户型拖地拖到一半没水了，应该怎么继续处理？",
+    "expected_output": "回答应提到支持断点续拖的机型可在加水后继续原位置拖地；如果没有这类能力，可通过分区或分批次拖扫来解决。"
+  },
+  {
+    "name": "MULTI-STEP-002",
+    "tier": "full",
+    "category": "MULTI-STEP",
+    "case_type": "multi_step",
+    "folder": "default",
+    "limit": 5,
+    "input": "木地板被拖得起翘、变形了，应该立刻怎么处理？以后又该怎么设置？",
+    "expected_output": "回答应先提到立即吸干表面水分并通风，后续拖地应改为干拖或最低档出水量，避免地面积水。"
+  },
+  {
+    "name": "NEGATIVE-001",
+    "tier": "full",
+    "category": "NEGATIVE",
+    "case_type": "negative",
+    "folder": "default",
+    "limit": 5,
+    "input": "这个机器人能不能自动给家里的猫喂食？",
+    "expected_output": "回答应明确指出当前知识库主要覆盖扫地、拖地、维护、故障和选购相关内容，没有关于自动喂食功能的依据，不应编造支持情况。"
+  },
+  {
+    "name": "NEGATIVE-002",
+    "tier": "full",
+    "category": "NEGATIVE",
+    "case_type": "negative",
+    "folder": "default",
+    "limit": 5,
+    "input": "知识库里有没有提到扫地机器人支持太阳能充电？",
+    "expected_output": "回答应说明现有知识库未明确提供太阳能充电相关信息，不能据此确认支持该功能，不应凭空补充参数。"
+  },
+  {
+    "name": "BASIC-USE-004",
+    "tier": "full",
+    "category": "BASIC-USE",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "建图总是不完整或者地图错乱，一般怎么处理？",
+    "expected_output": "回答应提到清理反光物和移动障碍物、删除旧地图并重新建图，必要时检查传感器环境干扰。"
+  },
+  {
+    "name": "BASIC-USE-005",
+    "tier": "full",
+    "category": "BASIC-USE",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "机器人清扫时老是频繁暂停，通常要检查什么？",
+    "expected_output": "回答应提到检查尘盒和滤网是否堵塞、电量是否不足，以及传感器是否被灰尘遮挡。"
+  },
+  {
+    "name": "BASIC-USE-006",
+    "tier": "full",
+    "category": "BASIC-USE",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "手动遥控机器人没有反应，知识库建议怎么排查？",
+    "expected_output": "回答应提到检查手机与机器人连接状态、退出并重进 APP，并确认机器人不处于自动清扫模式而是切换到手动模式。"
+  },
+  {
+    "name": "BASIC-USE-007",
+    "tier": "full",
+    "category": "BASIC-USE",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "机器人清扫结束后不自动回充，可能怎么解决？",
+    "expected_output": "回答应提到检查 APP 是否关闭自动回充、地图中的充电座位置是否异常，并清理回充传感器灰尘。"
+  },
+  {
+    "name": "BASIC-USE-008",
+    "tier": "full",
+    "category": "BASIC-USE",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "开机后机器人不移动，知识库建议先看哪些地方？",
+    "expected_output": "回答应提到检查机身是否被线材或防撞条卡住，并检查底部万向轮和驱动轮是否卡顿。"
+  },
+  {
+    "name": "BASIC-USE-009",
+    "tier": "full",
+    "category": "BASIC-USE",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "为什么机器人联网时总强调要用2.4G WiFi？",
+    "expected_output": "回答应明确指出知识库建议机器人和手机连接同一 2.4G WiFi，且部分内容明确说明暂不支持 5G。"
+  },
+  {
+    "name": "BASIC-USE-010",
+    "tier": "full",
+    "category": "BASIC-USE",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "想让机器人按照固定时间自己清扫，我应该在哪类设置里操作？",
+    "expected_output": "回答应提到在 APP 的清扫设置或定时清扫入口中设置时间、区域和频次。"
+  },
+  {
+    "name": "CLEANING-005",
+    "tier": "full",
+    "category": "CLEANING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "边角位置总扫不干净，应该怎么优化？",
+    "expected_output": "回答应提到检查边刷是否正常旋转或磨损，并可开启沿边清扫模式，必要时手动辅助清理边角。"
+  },
+  {
+    "name": "CLEANING-006",
+    "tier": "full",
+    "category": "CLEANING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "像饼干渣这种大颗粒垃圾吸不进去时怎么办？",
+    "expected_output": "回答应提到检查滚刷仓和吸口是否堵塞，并把吸力调高或切换到大吸力模式。"
+  },
+  {
+    "name": "CLEANING-007",
+    "tier": "full",
+    "category": "CLEANING",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "同一个家里有地毯也有瓷砖，清洁效果不一致时怎么调？",
+    "expected_output": "回答应提到在 APP 中使用分区清扫，对不同区域分别调整吸力和拖地模式或参数。"
+  },
+  {
+    "name": "CLEANING-008",
+    "tier": "full",
+    "category": "CLEANING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "拖完地之后地面上有拖布掉下来的毛絮，怎么处理？",
+    "expected_output": "回答应提到更换新的无尘拖布，使用前先浸泡并拧干拖布，必要时清扫后再用干布轻擦地面。"
+  },
+  {
+    "name": "CLEANING-009",
+    "tier": "full",
+    "category": "CLEANING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "拖扫后地面还是有细小灰尘，知识库建议怎么改善？",
+    "expected_output": "回答应提到检查滤网是否堵塞、主刷是否磨损，并建议先进行精扫或高吸力扫地，再进行拖地。"
+  },
+  {
+    "name": "CLEANING-010",
+    "tier": "full",
+    "category": "CLEANING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "床底和沙发底的拖扫效果总不好，应该怎么优化？",
+    "expected_output": "回答应提到先清理缠绕物，确保机器人能顺利进入，并可在 APP 中对该区域设置更高吸力、更深度的拖扫或更多清洁次数。"
+  },
+  {
+    "name": "CONSUMABLES-002",
+    "tier": "full",
+    "category": "CONSUMABLES",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "主刷一般多久需要更换一次？",
+    "expected_output": "回答应提到普通家庭主刷大约 3 到 6 个月更换一次，宠物家庭通常更短，约 1 到 3 个月。"
+  },
+  {
+    "name": "CONSUMABLES-003",
+    "tier": "full",
+    "category": "CONSUMABLES",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "尘盒多久清理一次比较合适？",
+    "expected_output": "回答应提到普通家庭大约 2 到 3 天清理一次，宠物家庭或大户型建议每天清理。"
+  },
+  {
+    "name": "CONSUMABLES-004",
+    "tier": "full",
+    "category": "CONSUMABLES",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "电池续航越来越短时，除了更换电池，平时还能怎么维护？",
+    "expected_output": "回答应提到避免长期亏电、每次使用后及时回充，并可定期进行满充满放校准；若使用一到两年后衰减严重再考虑更换。"
+  },
+  {
+    "name": "CONSUMABLES-005",
+    "tier": "full",
+    "category": "CONSUMABLES",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "自动集尘款的集尘袋多久换一次？",
+    "expected_output": "回答应提到普通家庭约 1 到 2 个月更换一次，宠物家庭约半个月到 1 个月更换一次。"
+  },
+  {
+    "name": "CONSUMABLES-006",
+    "tier": "full",
+    "category": "CONSUMABLES",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "万向轮卡顿还有异响，知识库建议怎么处理？",
+    "expected_output": "回答应提到清理万向轮缠绕的毛发和线头，并可在转轴处滴少量润滑油。"
+  },
+  {
+    "name": "CONSUMABLES-007",
+    "tier": "full",
+    "category": "CONSUMABLES",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "驱动轮打滑或者不转了，应该怎么排查？",
+    "expected_output": "回答应提到清理驱动轮缝隙中的杂物和毛发，并检查轮胎是否磨损严重，必要时更换。"
+  },
+  {
+    "name": "CONSUMABLES-008",
+    "tier": "full",
+    "category": "CONSUMABLES",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "电池如果长期不用，应该怎么存放？",
+    "expected_output": "回答应提到把电池保留在大约 50% 到 70% 电量，放在阴凉干燥处，并每 1 到 2 个月补电一次。"
+  },
+  {
+    "name": "TROUBLESHOOTING-005",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "机器人开机无反应、指示灯也不亮，该怎么检查？",
+    "expected_output": "回答应提到检查电源适配器和电源线、确认电池安装到位和充电座通电，若仍无反应应联系售后检测主板。"
+  },
+  {
+    "name": "TROUBLESHOOTING-006",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "机器人不移动或者走得特别慢，知识库建议看什么？",
+    "expected_output": "回答应提到检查驱动轮和万向轮是否缠绕毛发或卡顿，并考虑地面过滑等因素。"
+  },
+  {
+    "name": "TROUBLESHOOTING-007",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "吸力突然明显下降，通常是什么原因？",
+    "expected_output": "回答应提到尘盒、滤网、风道堵塞，或主刷、吸口被杂物堵住，并给出逐一清理思路。"
+  },
+  {
+    "name": "TROUBLESHOOTING-008",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "主刷不转了，一般怎么排查？",
+    "expected_output": "回答应提到先看主刷是否被异物卡住、重新安装主刷，若仍不转则可能需要检测电机或线路。"
+  },
+  {
+    "name": "TROUBLESHOOTING-009",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "边刷不转的时候，知识库建议怎么处理？",
+    "expected_output": "回答应提到检查边刷是否安装到位、转轴是否缠绕毛发，并在电机异常或异响时考虑更换边刷电机。"
+  },
+  {
+    "name": "TROUBLESHOOTING-010",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "充电时指示灯一直闪，机器人却充不进去电，应该怎么排查？",
+    "expected_output": "回答应提到检查并擦拭充电触点，排查适配器故障和电池损坏等原因。"
+  },
+  {
+    "name": "TROUBLESHOOTING-011",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "续航衰减特别明显，什么时候应该考虑换电池？",
+    "expected_output": "回答应提到先避免过充过放并做电池校准，如果续航不足原来的约 50%，应考虑更换原装电池。"
+  },
+  {
+    "name": "TROUBLESHOOTING-012",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "拖地的时候水箱漏水，知识库推荐怎么处理？",
+    "expected_output": "回答应提到检查水箱盖是否拧紧、密封圈是否老化或脱落，并检查出水管是否堵塞。"
+  },
+  {
+    "name": "TROUBLESHOOTING-013",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "拖地不出水时，应该先检查什么？",
+    "expected_output": "回答应提到检查水箱是否有水、出水量是否过低，以及出水管是否堵塞。"
+  },
+  {
+    "name": "TROUBLESHOOTING-014",
+    "tier": "full",
+    "category": "TROUBLESHOOTING",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "自动洗拖布功能失效时，知识库里建议看哪些地方？",
+    "expected_output": "回答应提到检查清洁仓是否有水、污水仓是否满溢，以及清洁刷是否堵塞或缠绕。"
+  },
+  {
+    "name": "ALARM-002",
+    "tier": "full",
+    "category": "ALARM",
+    "case_type": "alarm",
+    "folder": "default",
+    "limit": 5,
+    "input": "已经装了尘盒，但还是提示“尘盒未安装”，怎么处理？",
+    "expected_output": "回答应提到检查尘盒是否安装到位，并清理尘盒感应传感器上的灰尘后重新安装。"
+  },
+  {
+    "name": "ALARM-003",
+    "tier": "full",
+    "category": "ALARM",
+    "case_type": "alarm",
+    "folder": "default",
+    "limit": 5,
+    "input": "出现“滤网堵塞”报警时，知识库建议怎么做？",
+    "expected_output": "回答应提到拆下滤网和吸口中的灰尘杂物，清洁滤网并晾干后装回，再重启机器人。"
+  },
+  {
+    "name": "ALARM-004",
+    "tier": "full",
+    "category": "ALARM",
+    "case_type": "alarm",
+    "folder": "default",
+    "limit": 5,
+    "input": "“碰撞传感器故障”报警一般怎么排查？",
+    "expected_output": "回答应提到检查防撞条是否卡住或变形，确认回弹正常，并清理相关传感器灰尘。"
+  },
+  {
+    "name": "ALARM-005",
+    "tier": "full",
+    "category": "ALARM",
+    "case_type": "alarm",
+    "folder": "default",
+    "limit": 5,
+    "input": "“拖地系统故障”报警出现时该怎么处理？",
+    "expected_output": "回答应提到检查水箱和拖布是否安装到位，清理拖地模组中的杂物，必要时重启设备。"
+  },
+  {
+    "name": "ALARM-006",
+    "tier": "full",
+    "category": "ALARM",
+    "case_type": "alarm",
+    "folder": "default",
+    "limit": 5,
+    "input": "“WiFi模块故障”报警时，知识库建议怎么做？",
+    "expected_output": "回答应提到重启机器人和路由器，必要时恢复出厂设置后重新连接 WiFi，若仍报警应联系售后。"
+  },
+  {
+    "name": "ALARM-007",
+    "tier": "full",
+    "category": "ALARM",
+    "case_type": "alarm",
+    "folder": "default",
+    "limit": 5,
+    "input": "“防跌落传感器故障”报警怎么处理？",
+    "expected_output": "回答应提到擦拭底部防跌落传感器，检查是否被灰尘遮挡，必要时进一步检查是否损坏。"
+  },
+  {
+    "name": "ALARM-008",
+    "tier": "full",
+    "category": "ALARM",
+    "case_type": "alarm",
+    "folder": "default",
+    "limit": 5,
+    "input": "自动集尘款出现“集尘系统故障”报警时该怎么排查？",
+    "expected_output": "回答应提到检查集尘袋是否安装到位或已满，清理集尘通道中的杂物，并可重启集尘系统。"
+  },
+  {
+    "name": "MOPPING-004",
+    "tier": "full",
+    "category": "MOPPING",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "扫拖一体机器人能不能只扫地不拖地？",
+    "expected_output": "回答应明确说明可以，在 APP 的清扫模式中关闭拖地功能，仅保留吸尘模式即可。"
+  },
+  {
+    "name": "MOPPING-005",
+    "tier": "full",
+    "category": "MOPPING",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "如果我想只拖地不扫地，知识库里是怎么说的？",
+    "expected_output": "回答应说明可以单独开启仅拖地模式，并提到需要安装好水箱和拖布、按需调整出水量。"
+  },
+  {
+    "name": "MOPPING-006",
+    "tier": "full",
+    "category": "MOPPING",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "扫拖一体机器人支持干拖和湿拖切换吗？",
+    "expected_output": "回答应说明支持干拖和湿拖，干拖用于浮尘毛发，湿拖用于污渍清理，湿拖时需要给水箱加清水。"
+  },
+  {
+    "name": "MOPPING-007",
+    "tier": "full",
+    "category": "MOPPING",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "自动洗拖布的机型，能不能只扫不洗拖布？",
+    "expected_output": "回答应说明可以关闭自动洗拖布，仅开启吸尘模式，在拖布未湿润时不会执行拖地。"
+  },
+  {
+    "name": "MOPPING-008",
+    "tier": "full",
+    "category": "MOPPING",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "拖地时出水量过大或过小，应该怎么调？",
+    "expected_output": "回答应提到在 APP 的拖地设置中调节低、中、高档出水量，并指出木地板通常用低档，瓷砖或水泥地可用中高档。"
+  },
+  {
+    "name": "MOPPING-009",
+    "tier": "full",
+    "category": "MOPPING",
+    "case_type": "procedure",
+    "folder": "default",
+    "limit": 5,
+    "input": "一次性拖布应该怎么安装？",
+    "expected_output": "回答应提到把一次性拖布平铺在支架上，扣紧四周卡扣，确保贴合牢固再使用。"
+  },
+  {
+    "name": "MOPPING-010",
+    "tier": "full",
+    "category": "MOPPING",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "可水洗拖布一般多久清洗一次？",
+    "expected_output": "回答应说明最好每次清扫完成后都清洗，宠物家庭或油污区域应更及时清洗。"
+  },
+  {
+    "name": "MAINTENANCE-003",
+    "tier": "full",
+    "category": "MAINTENANCE",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "充电触点平时应该怎么维护？",
+    "expected_output": "回答应提到定期用干布擦拭机器人和充电座的金属触点，避免氧化导致接触不良。"
+  },
+  {
+    "name": "MAINTENANCE-004",
+    "tier": "full",
+    "category": "MAINTENANCE",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "散热口需要定期清理吗？怎么清理？",
+    "expected_output": "回答应提到每周可用软毛刷清理散热口，避免灰尘堵塞引起电机过热保护。"
+  },
+  {
+    "name": "MAINTENANCE-005",
+    "tier": "full",
+    "category": "MAINTENANCE",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "防撞条平时要怎么做日常维护？",
+    "expected_output": "回答应提到定期清理防撞条缝隙中的毛发杂物，并可轻按多次检查回弹是否正常。"
+  },
+  {
+    "name": "MAINTENANCE-006",
+    "tier": "full",
+    "category": "MAINTENANCE",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "万向轮和驱动轮平时需要上润滑油吗？",
+    "expected_output": "回答应提到可定期在万向轮或驱动轮转轴处滴少量专用润滑油，但不能过量以免粘灰。"
+  },
+  {
+    "name": "MAINTENANCE-007",
+    "tier": "full",
+    "category": "MAINTENANCE",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "扫拖一体机器人长期不用时，水箱和污水仓应该怎么处理？",
+    "expected_output": "回答应提到存放前排空清水箱和污水仓中的液体，擦干并晾干后再存放。"
+  },
+  {
+    "name": "MAINTENANCE-008",
+    "tier": "full",
+    "category": "MAINTENANCE",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "机器人长期存放的环境温度和湿度有什么建议？",
+    "expected_output": "回答应提到适合在阴凉、干燥、通风环境存放，温度大致控制在 5℃ 到 35℃，相对湿度不高于约 60%。"
+  },
+  {
+    "name": "MAINTENANCE-009",
+    "tier": "full",
+    "category": "MAINTENANCE",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "长时间存放期间，需要多久补一次电？",
+    "expected_output": "回答应提到长期存放时可每 1 到 2 个月补电一次，保持电池不过度亏电。"
+  },
+  {
+    "name": "MAINTENANCE-010",
+    "tier": "full",
+    "category": "MAINTENANCE",
+    "case_type": "maintenance",
+    "folder": "default",
+    "limit": 5,
+    "input": "为了减少故障，软件和耗材层面平时应该做什么？",
+    "expected_output": "回答应提到定期更新机器人固件和 APP，并在耗材到期时及时更换，避免因老化耗材导致其他配件损坏。"
+  },
+  {
+    "name": "BUYING-007",
+    "tier": "full",
+    "category": "BUYING",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "一般家用和地毯场景，吸力参数大概怎么选？",
+    "expected_output": "回答应提到家用可优先考虑约 3000Pa 及以上，地毯场景则更适合约 4000Pa 及以上并支持可调吸力。"
+  },
+  {
+    "name": "BUYING-008",
+    "tier": "full",
+    "category": "BUYING",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "自动集尘功能主要看哪些参数或设计？",
+    "expected_output": "回答应提到自动集尘适合懒人场景，并关注集尘袋容量约 2.5L 及以上以及密封防漏灰设计。"
+  },
+  {
+    "name": "BUYING-009",
+    "tier": "full",
+    "category": "BUYING",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "如果我比较在意拖布发霉异味，选购时应该关注什么？",
+    "expected_output": "回答应提到优先选择带自动洗拖布和热风烘干功能的机型，并关注清洗能力。"
+  },
+  {
+    "name": "BUYING-010",
+    "tier": "full",
+    "category": "BUYING",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "家里门槛比较多，越障能力大概要看多少？",
+    "expected_output": "回答应提到门槛高度约 2 厘米时，应优先考虑越障能力不低于 2 厘米的机型。"
+  },
+  {
+    "name": "BUYING-011",
+    "tier": "full",
+    "category": "BUYING",
+    "case_type": "exact_spec",
+    "folder": "default",
+    "limit": 5,
+    "input": "APP功能方面，哪些算是比较基础且必备的？",
+    "expected_output": "回答应提到分区清扫、禁区设置和定时任务属于基础功能，可再补充多楼层地图或语音控制等高阶能力。"
+  },
+  {
+    "name": "BUYING-012",
+    "tier": "full",
+    "category": "BUYING",
+    "case_type": "comparison",
+    "folder": "default",
+    "limit": 5,
+    "input": "长发或者宠物家庭在主刷设计上应该怎么选？",
+    "expected_output": "回答应提到优先考虑防缠绕主刷或带硅胶条的设计，更适合长发和宠物家庭。"
+  },
+  {
+    "name": "FUNCTION-003",
+    "tier": "full",
+    "category": "FUNCTION",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "扫拖不同区域的吸力、出水量和次数可以分别设置吗？",
+    "expected_output": "回答应说明可以，在建图分区后，可在分区设置中给每个区域分别设置吸力、出水量和清洁次数。"
+  },
+  {
+    "name": "FUNCTION-004",
+    "tier": "full",
+    "category": "FUNCTION",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "顽固污渍区域想多拖几遍，清洁次数一般能调多少？",
+    "expected_output": "回答应提到 APP 中通常支持 1 到 3 次清洁次数设置，可对顽固污渍区域增加次数。"
+  },
+  {
+    "name": "FUNCTION-005",
+    "tier": "full",
+    "category": "FUNCTION",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "拖布自动抬升一般在什么场景下会生效？",
+    "expected_output": "回答应提到支持该功能的机型会在回充、跨越地毯或完成清扫后自动抬升拖布，避免污染地面或地毯。"
+  },
+  {
+    "name": "FUNCTION-006",
+    "tier": "full",
+    "category": "FUNCTION",
+    "case_type": "symptom_search",
+    "folder": "default",
+    "limit": 5,
+    "input": "APP里分区清扫没法选区域了，知识库建议怎么处理？",
+    "expected_output": "回答应提到确认地图建图完整，必要时删除旧地图重新建图，并可更新 APP 和机器人系统后重试。"
+  },
+  {
+    "name": "FUNCTION-007",
+    "tier": "full",
+    "category": "FUNCTION",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "怎么设置先扫后拖的流程？",
+    "expected_output": "回答应提到在 APP 的自定义清扫中选择先扫后拖模式，并可分别设置扫地吸力和拖地出水量。"
+  },
+  {
+    "name": "FUNCTION-008",
+    "tier": "full",
+    "category": "FUNCTION",
+    "case_type": "configuration",
+    "folder": "default",
+    "limit": 5,
+    "input": "如果想让机器人避开地毯边缘的水渍，知识库里有什么设置思路？",
+    "expected_output": "回答应提到可设置地毯区域或地毯边缘缓冲区为禁拖，或利用拖布抬升功能让其只扫不拖。"
+  },
+  {
+    "name": "MULTI-STEP-003",
+    "tier": "full",
+    "category": "MULTI-STEP",
+    "case_type": "multi_step",
+    "folder": "default",
+    "limit": 5,
+    "input": "地上有宠物尿液时，机器人应该怎么清理比较合适？",
+    "expected_output": "回答应提到先用纸巾吸干，再使用宠物专用除味清洁液稀释后定点拖地，多次清洁后再用干拖或吸干残余水分。"
+  },
+  {
+    "name": "MULTI-STEP-004",
+    "tier": "full",
+    "category": "MULTI-STEP",
+    "case_type": "multi_step",
+    "folder": "default",
+    "limit": 5,
+    "input": "装修后灰尘和水泥渣很多，能不能直接让机器人开荒？",
+    "expected_output": "回答应明确不建议直接开荒，应先手动清理水泥渣、沙粒和尖锐杂物，再使用机器人，以免卡死或刮伤配件。"
+  },
+  {
+    "name": "MULTI-STEP-005",
+    "tier": "full",
+    "category": "MULTI-STEP",
+    "case_type": "multi_step",
+    "folder": "default",
+    "limit": 5,
+    "input": "机器人如果不慎进水，应该马上怎么处理？",
+    "expected_output": "回答应提到立刻断电，放到通风处晾干，切勿立即开机，并联系售后进一步检测。"
+  },
+  {
+    "name": "NEGATIVE-003",
+    "tier": "full",
+    "category": "NEGATIVE",
+    "case_type": "negative",
+    "folder": "default",
+    "limit": 5,
+    "input": "知识库有没有说这个机器人可以自动开窗通风？",
+    "expected_output": "回答应明确指出当前知识库主要讨论扫地、拖地、维护、故障和选购，没有自动开窗功能依据，不应编造支持情况。"
+  },
+  {
+    "name": "NEGATIVE-004",
+    "tier": "full",
+    "category": "NEGATIVE",
+    "case_type": "negative",
+    "folder": "default",
+    "limit": 5,
+    "input": "这个机器人能不能顺便给老人测血压？",
+    "expected_output": "回答应明确说明知识库中没有任何测血压相关能力描述，不能据此声称支持该功能。"
+  },
+  {
+    "name": "NEGATIVE-005",
+    "tier": "full",
+    "category": "NEGATIVE",
+    "case_type": "negative",
+    "folder": "default",
+    "limit": 5,
+    "input": "知识库里有没有提到机器人自带8K摄像头监控功能？",
+    "expected_output": "回答应明确说明现有知识库没有提供 8K 摄像头监控功能的依据，不能据此确认支持该能力，也不应补充虚构参数。"
+  }
+]

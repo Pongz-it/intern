@@ -1,0 +1,327 @@
+{
+  "generated_at": "2026-03-26T15:56:34.470176",
+  "summary": {
+    "case_count": 2,
+    "composite_score": 0.41000000000000003,
+    "mean_composite": 0.41000000000000003,
+    "pass_rate": 0.5,
+    "pass_count": 1,
+    "fail_count": 1,
+    "failed_below_threshold_count": 1,
+    "threshold": 0.5,
+    "hallucination_penalty_avg": 0.7,
+    "dimensions": {
+      "tool_selection": 0.55,
+      "parameter_accuracy": 0.39999999999999997,
+      "recall_completeness": 0.4,
+      "answer_accuracy": 0.3,
+      "safety_routing": 0.4
+    },
+    "by_category": {
+      "MAINTENANCE": {
+        "count": 1,
+        "composite": 0.66,
+        "dimensions": {
+          "tool_selection": 0.9,
+          "parameter_accuracy": 0.7,
+          "recall_completeness": 0.6,
+          "answer_accuracy": 0.5,
+          "safety_routing": 0.6
+        }
+      },
+      "TROUBLESHOOTING": {
+        "count": 1,
+        "composite": 0.16,
+        "dimensions": {
+          "tool_selection": 0.2,
+          "parameter_accuracy": 0.1,
+          "recall_completeness": 0.2,
+          "answer_accuracy": 0.1,
+          "safety_routing": 0.2
+        }
+      }
+    },
+    "by_case_type": {
+      "knowledge_qa": {
+        "count": 2,
+        "composite": 0.41000000000000003
+      }
+    },
+    "latency_avg_ms": 123678,
+    "latency_p95_ms": 137617,
+    "level": "POOR",
+    "dimensions_used": [
+      "tool_selection",
+      "parameter_accuracy",
+      "recall_completeness",
+      "answer_accuracy",
+      "safety_routing"
+    ]
+  },
+  "results": [
+    {
+      "name": "MAINTENANCE-001",
+      "input": "扫地机器人怎么维护？",
+      "expected_output": "回答应覆盖清洁滚刷、清空尘盒、滤网检查、传感器维护或类似维护建议。",
+      "actual_output": "[1] 维护保养.txt (score=0.5)\n# 扫地机器人+扫拖一体机器人 维护保养200条（纯保养维度，分通用基础/扫地专属/扫拖一体拖地专属/耗材专项/环境适配/长期存放/故障预防，覆盖全机型日常维护）\n## 通用基础维护（50条）\n1. 每日使用后，用干软布擦拭机器人机身外壳，去除灰尘、水渍，避免污渍附着硬化。\n2. 每次清扫完成，及时清理机身防撞条缝隙的毛发、线头，防止卡扣卡顿影响回弹。\n3. 每日检查机器人底部驱动轮、万向轮，用镊子挑出缠绕的毛发、杂物，保证轮组转动顺畅。\n4. 日常使用时，避免机器人碰撞尖锐硬物（如桌角、金属架），防止机身外壳、传感器损坏。\n5. 每天清洁机器人充电触点，用干布擦拭机身和充电座的金属触点，避免氧化导致接触不良。\n6. 机器人工作时，避免用手触碰旋转的主刷、边刷，防止夹伤和配件损坏。\n7. 每日检查机身底部防跌落、沿边传感器，用干布轻擦表面，无灰尘、水渍遮挡。\n8. 清洁机器人时，全程断开电源，切勿用水直接冲洗机身（防水机型仅可擦拭，不可浸泡）。\n9. 每日清理尘盒卡扣处的杂物，保证尘盒安装到位，避免漏灰、报警。\n10. 每次使用后，将机器人放回充电座，保证随时补电，避免亏电存放。\n11\n\n[2] 维护保养.txt (score=0.4584)\n## 扫地功能专属维护（30条）\n1. 每次清扫完成后，立即清理主刷上的毛发、线头，用剪刀剪断缠绕物，切勿强行拉扯。\n2. 每日清理边刷上的灰尘、杂物，保证边刷旋转时能正常将边角灰尘扫入吸口。\n3. 每周拆解主刷滚刷仓，用软毛刷清理仓内的灰尘、毛发，无死角残留。\n4. 主刷使用时若出现“打滑”，检查滚刷胶条是否磨损，及时清洁或更换。\n5. 每周清理机器人风道，用软毛刷从尘盒出风口向吸口方向清扫，保证风道通畅。\n6. 集尘款机器人，每日检查集尘通道，无毛发、杂物堵塞，确保集尘顺畅。\n7. 每次清理尘盒后，用干布擦拭尘盒内部，避免灰尘结块，不可用水浸泡（防水尘盒除外）。\n8. 尘盒滤网需与尘盒配套安装，不可缺失，防止灰尘进入电机导致损坏。\n9. 扫地时若吸力下降，优先检查尘盒、滤网、风道是否堵塞，逐一清理后重试。\n10. 每周检查机器人吸口滚刷（无主刷机型），确保无缠绕、磨损，转动顺畅。\n11. 集尘款机器人，每日检查集尘袋安装是否到位，密封严实，避免漏灰。\n12. 机器人在长毛地毯上清扫后，立即清理主刷上的地毯纤维，防止缠绕硬化。\n13. 每月检查主刷电机的工作状态，运行时无异常发热、异\n\n[3] 维护保养.txt (score=0.4498)\n## 环境适配维护（20条）\n1. 木地板环境：拖地时调至低档出水量，使用干拖模式，避免地面积水，每周对机器人轮组进行除尘，防止泥沙磨损地板。\n2. 瓷砖/大理石环境：拖地后及时清理机器人底部水渍，每月对拖布支架进行除垢，防止水垢附着。\n3. 长毛地毯环境：清扫后立即清理主刷、边刷上的地毯纤维，关闭拖地功能，防止拖布浸湿地毯导致发霉。\n4. 短毛地毯环境：使用地毯增压功能后，检查主刷是否复位，每周清理地毯边缘的灰尘，避免机器人漏扫。\n5. 水泥地/老旧地砖环境：清扫后立即清理机身底部、轮组的泥沙，防止磨损配件，减少拖地频次，避免灰尘结块。\n6. 宠物家庭：每次清扫后全面清理主刷、尘盒、拖布，每周对机器人进行除味消毒，耗材更换周期缩短50%。\n7. 有婴儿/小孩的家庭：拖地仅用清水，避免添加清洁液，拖布每次使用后高温消毒，机器人机身每日擦拭。\n8. 多尘/风沙大的环境：每日清理尘盒、滤网，每周更换边刷，关闭拖地功能，防止灰尘与水渍混合结块。\n9. 南方回南天/潮湿环境：减少拖地频次，使用干拖模式，机器人机身、耗材每日晾干，每周对机器人进行除湿处理。\n10. 北方干燥/多灰环境：增大吸力档\n\n[4] 扫地机器人100问2.txt (score=0.446)\n# 扫地机器人常见问题及解答（100条）\n### 基础使用类\n1. **首次使用扫地机器人需要做什么？**\n- 拆除机身所有包装配件，充满电后，在空旷环境下启动建图，完成后再设置清扫区域和禁区。\n2. **开机后机器人不移动怎么办？**\n- 检查机身是否被防撞条、电源线缠绕，确认底部万向轮、驱动轮无卡顿，重启设备重试。\n3. **机器人找不到充电座怎么处理？**\n- 清理充电座周围障碍物，保证充电座前方3米、左右1米无遮挡，将机器人放回充电座附近重启回充。\n4. **APP无法连接机器人怎么办？**\n- 确认手机和机器人连接同一2.4GWiFi（暂不支持5G），重启机器人和路由器，重新在APP添加设备。\n5. **建图不完整、地图错乱怎么解决？**\n- 清理环境中反光物（如镜面、抛光地砖）和移动障碍物，删除旧地图，让机器人重新建图。\n6. **机器人清扫时频繁暂停是什么原因？**\n- 检查尘盒、滤网是否堵塞，电量是否不足，机身传感器是否被灰尘遮挡，清洁后重试。\n7. **如何设置定时清扫？**\n- 打开配套APP，进入【清扫设置】-【定时清扫】，选择清扫时间、区域和频次，保存后机器人将\n\n[5] 维护保养.txt (score=0.4389)\n## 故障预防维护（20条）\n1. 定期更新机器人固件和APP，保证系统功能正常，减少软件故障导致的操作异常。\n2. 避免机器人长时间连续工作，大户型分批次清扫，防止电机、电池过热导致故障。\n3. 每次使用前，检查地面是否有尖锐硬物、电线、绳子等，避免卡死机件、缠绕配件。\n4. 严格按机型说明使用，不可超重负载，避免机器人在超出清扫面积的环境工作。\n5. 充电时遵循“浅充浅放”，避免电池过充、过放，延长电池使用寿命，减少电池故障。\n6. 滤网、尘盒堵塞时及时清理，避免吸力下降导致电机超负荷工作，烧毁电机。\n7. 拖布、水箱漏水时立即停机，清理后再使用，避免水渍进入机身内部导致电路短路。\n8. 机器人出现轻微异响、卡顿时，立即停机检查，切勿强行使用，防止故障扩大。\n9. 避免自行拆解机器人内部零件（如电机、主板、电池），故障后联系官方售后维修。\n10. 每月对机器人进行一次全面的功能测试，包括扫拖、避障、回充、定点清扫等，及时发现潜在故障。\n11. 耗材到期及时更换，避免老化、磨损的耗材导致机器人工作异常，损坏其他配件。\n12. 机器人连接WiFi时，仅使用2.4G网络，避免5G网络导致",
+      "category": "MAINTENANCE",
+      "case_type": "knowledge_qa",
+      "tier": "sample",
+      "folder": "default",
+      "status": "OK",
+      "passed": true,
+      "response_mode": "search_fallback",
+      "composite_score": 0.66,
+      "hallucination_penalty": 0.5,
+      "latency_ms": 137617,
+      "search_results": [
+        {
+          "document_id": "default/维护保养.txt",
+          "chunk_id": 0,
+          "content": "# 扫地机器人+扫拖一体机器人 维护保养200条（纯保养维度，分通用基础/扫地专属/扫拖一体拖地专属/耗材专项/环境适配/长期存放/故障预防，覆盖全机型日常维护）\n## 通用基础维护（50条）\n1. 每日使用后，用干软布擦拭机器人机身外壳，去除灰尘、水渍，避免污渍附着硬化。\n2. 每次清扫完成，及时清理机身防撞条缝隙的毛发、线头，防止卡扣卡顿影响回弹。\n3. 每日检查机器人底部驱动轮、万向轮，用镊子挑出缠绕的毛发、杂物，保证轮组转动顺畅。\n4. 日常使用时，避免机器人碰撞尖锐硬物（如桌角、金属架），防止机身外壳、传感器损坏。\n5. 每天清洁机器人充电触点，用干布擦拭机身和充电座的金属触点，避免氧化导致接触不良。\n6. 机器人工作时，避免用手触碰旋转的主刷、边刷，防止夹伤和配件损坏。\n7. 每日检查机身底部防跌落、沿边传感器，用干布轻擦表面，无灰尘、水渍遮挡。\n8. 清洁机器人时，全程断开电源，切勿用水直接冲洗机身（防水机型仅可擦拭，不可浸泡）。\n9. 每日清理尘盒卡扣处的杂物，保证尘盒安装到位，避免漏灰、报警。\n10. 每次使用后，将机器人放回充电座，保证随时补电，避免亏电存放。\n11",
+          "score": 0.5,
+          "title": "维护保养.txt",
+          "metadata": {
+            "folder": "default",
+            "filename": "维护保养.txt",
+            "indexed_at": "2026-03-26T15:26:01.910821"
+          }
+        },
+        {
+          "document_id": "default/维护保养.txt",
+          "chunk_id": 1,
+          "content": "## 扫地功能专属维护（30条）\n1. 每次清扫完成后，立即清理主刷上的毛发、线头，用剪刀剪断缠绕物，切勿强行拉扯。\n2. 每日清理边刷上的灰尘、杂物，保证边刷旋转时能正常将边角灰尘扫入吸口。\n3. 每周拆解主刷滚刷仓，用软毛刷清理仓内的灰尘、毛发，无死角残留。\n4. 主刷使用时若出现“打滑”，检查滚刷胶条是否磨损，及时清洁或更换。\n5. 每周清理机器人风道，用软毛刷从尘盒出风口向吸口方向清扫，保证风道通畅。\n6. 集尘款机器人，每日检查集尘通道，无毛发、杂物堵塞，确保集尘顺畅。\n7. 每次清理尘盒后，用干布擦拭尘盒内部，避免灰尘结块，不可用水浸泡（防水尘盒除外）。\n8. 尘盒滤网需与尘盒配套安装，不可缺失，防止灰尘进入电机导致损坏。\n9. 扫地时若吸力下降，优先检查尘盒、滤网、风道是否堵塞，逐一清理后重试。\n10. 每周检查机器人吸口滚刷（无主刷机型），确保无缠绕、磨损，转动顺畅。\n11. 集尘款机器人，每日检查集尘袋安装是否到位，密封严实，避免漏灰。\n12. 机器人在长毛地毯上清扫后，立即清理主刷上的地毯纤维，防止缠绕硬化。\n13. 每月检查主刷电机的工作状态，运行时无异常发热、异",
+          "score": 0.4584,
+          "title": "维护保养.txt",
+          "metadata": {
+            "folder": "default",
+            "filename": "维护保养.txt",
+            "indexed_at": "2026-03-26T15:26:02.395289"
+          }
+        },
+        {
+          "document_id": "default/维护保养.txt",
+          "chunk_id": 4,
+          "content": "## 环境适配维护（20条）\n1. 木地板环境：拖地时调至低档出水量，使用干拖模式，避免地面积水，每周对机器人轮组进行除尘，防止泥沙磨损地板。\n2. 瓷砖/大理石环境：拖地后及时清理机器人底部水渍，每月对拖布支架进行除垢，防止水垢附着。\n3. 长毛地毯环境：清扫后立即清理主刷、边刷上的地毯纤维，关闭拖地功能，防止拖布浸湿地毯导致发霉。\n4. 短毛地毯环境：使用地毯增压功能后，检查主刷是否复位，每周清理地毯边缘的灰尘，避免机器人漏扫。\n5. 水泥地/老旧地砖环境：清扫后立即清理机身底部、轮组的泥沙，防止磨损配件，减少拖地频次，避免灰尘结块。\n6. 宠物家庭：每次清扫后全面清理主刷、尘盒、拖布，每周对机器人进行除味消毒，耗材更换周期缩短50%。\n7. 有婴儿/小孩的家庭：拖地仅用清水，避免添加清洁液，拖布每次使用后高温消毒，机器人机身每日擦拭。\n8. 多尘/风沙大的环境：每日清理尘盒、滤网，每周更换边刷，关闭拖地功能，防止灰尘与水渍混合结块。\n9. 南方回南天/潮湿环境：减少拖地频次，使用干拖模式，机器人机身、耗材每日晾干，每周对机器人进行除湿处理。\n10. 北方干燥/多灰环境：增大吸力档",
+          "score": 0.4498,
+          "title": "维护保养.txt",
+          "metadata": {
+            "folder": "default",
+            "filename": "维护保养.txt",
+            "indexed_at": "2026-03-26T15:26:04.917777"
+          }
+        },
+        {
+          "document_id": "default/扫地机器人100问2.txt",
+          "chunk_id": 0,
+          "content": "# 扫地机器人常见问题及解答（100条）\n### 基础使用类\n1. **首次使用扫地机器人需要做什么？**\n- 拆除机身所有包装配件，充满电后，在空旷环境下启动建图，完成后再设置清扫区域和禁区。\n2. **开机后机器人不移动怎么办？**\n- 检查机身是否被防撞条、电源线缠绕，确认底部万向轮、驱动轮无卡顿，重启设备重试。\n3. **机器人找不到充电座怎么处理？**\n- 清理充电座周围障碍物，保证充电座前方3米、左右1米无遮挡，将机器人放回充电座附近重启回充。\n4. **APP无法连接机器人怎么办？**\n- 确认手机和机器人连接同一2.4GWiFi（暂不支持5G），重启机器人和路由器，重新在APP添加设备。\n5. **建图不完整、地图错乱怎么解决？**\n- 清理环境中反光物（如镜面、抛光地砖）和移动障碍物，删除旧地图，让机器人重新建图。\n6. **机器人清扫时频繁暂停是什么原因？**\n- 检查尘盒、滤网是否堵塞，电量是否不足，机身传感器是否被灰尘遮挡，清洁后重试。\n7. **如何设置定时清扫？**\n- 打开配套APP，进入【清扫设置】-【定时清扫】，选择清扫时间、区域和频次，保存后机器人将",
+          "score": 0.446,
+          "title": "扫地机器人100问2.txt",
+          "metadata": {
+            "folder": "default",
+            "filename": "扫地机器人100问2.txt",
+            "indexed_at": "2026-03-26T15:25:48.487334"
+          }
+        },
+        {
+          "document_id": "default/维护保养.txt",
+          "chunk_id": 5,
+          "content": "## 故障预防维护（20条）\n1. 定期更新机器人固件和APP，保证系统功能正常，减少软件故障导致的操作异常。\n2. 避免机器人长时间连续工作，大户型分批次清扫，防止电机、电池过热导致故障。\n3. 每次使用前，检查地面是否有尖锐硬物、电线、绳子等，避免卡死机件、缠绕配件。\n4. 严格按机型说明使用，不可超重负载，避免机器人在超出清扫面积的环境工作。\n5. 充电时遵循“浅充浅放”，避免电池过充、过放，延长电池使用寿命，减少电池故障。\n6. 滤网、尘盒堵塞时及时清理，避免吸力下降导致电机超负荷工作，烧毁电机。\n7. 拖布、水箱漏水时立即停机，清理后再使用，避免水渍进入机身内部导致电路短路。\n8. 机器人出现轻微异响、卡顿时，立即停机检查，切勿强行使用，防止故障扩大。\n9. 避免自行拆解机器人内部零件（如电机、主板、电池），故障后联系官方售后维修。\n10. 每月对机器人进行一次全面的功能测试，包括扫拖、避障、回充、定点清扫等，及时发现潜在故障。\n11. 耗材到期及时更换，避免老化、磨损的耗材导致机器人工作异常，损坏其他配件。\n12. 机器人连接WiFi时，仅使用2.4G网络，避免5G网络导致",
+          "score": 0.4389,
+          "title": "维护保养.txt",
+          "metadata": {
+            "folder": "default",
+            "filename": "维护保养.txt",
+            "indexed_at": "2026-03-26T15:26:05.402592"
+          }
+        }
+      ],
+      "retrieval_context": [
+        "维护保养.txt\nscore=0.5\n# 扫地机器人+扫拖一体机器人 维护保养200条（纯保养维度，分通用基础/扫地专属/扫拖一体拖地专属/耗材专项/环境适配/长期存放/故障预防，覆盖全机型日常维护）\n## 通用基础维护（50条）\n1. 每日使用后，用干软布擦拭机器人机身外壳，去除灰尘、水渍，避免污渍附着硬化。\n2. 每次清扫完成，及时清理机身防撞条缝隙的毛发、线头，防止卡扣卡顿影响回弹。\n3. 每日检查机器人底部驱动轮、万向轮，用镊子挑出缠绕的毛发、杂物，保证轮组转动顺畅。\n4. 日常使用时，避免机器人碰撞尖锐硬物（如桌角、金属架），防止机身外壳、传感器损坏。\n5. 每天清洁机器人充电触点，用干布擦拭机身和充电座的金属触点，避免氧化导致接触不良。\n6. 机器人工作时，避免用手触碰旋转的主刷、边刷，防止夹伤和配件损坏。\n7. 每日检查机身底部防跌落、沿边传感器，用干布轻擦表面，无灰尘、水渍遮挡。\n8. 清洁机器人时，全程断开电源，切勿用水直接冲洗机身（防水机型仅可擦拭，不可浸泡）。\n9. 每日清理尘盒卡扣处的杂物，保证尘盒安装到位，避免漏灰、报警。\n10. 每次使用后，将机器人放回充电座，保证随时补电，避免亏电存放。\n11",
+        "维护保养.txt\nscore=0.4584\n## 扫地功能专属维护（30条）\n1. 每次清扫完成后，立即清理主刷上的毛发、线头，用剪刀剪断缠绕物，切勿强行拉扯。\n2. 每日清理边刷上的灰尘、杂物，保证边刷旋转时能正常将边角灰尘扫入吸口。\n3. 每周拆解主刷滚刷仓，用软毛刷清理仓内的灰尘、毛发，无死角残留。\n4. 主刷使用时若出现“打滑”，检查滚刷胶条是否磨损，及时清洁或更换。\n5. 每周清理机器人风道，用软毛刷从尘盒出风口向吸口方向清扫，保证风道通畅。\n6. 集尘款机器人，每日检查集尘通道，无毛发、杂物堵塞，确保集尘顺畅。\n7. 每次清理尘盒后，用干布擦拭尘盒内部，避免灰尘结块，不可用水浸泡（防水尘盒除外）。\n8. 尘盒滤网需与尘盒配套安装，不可缺失，防止灰尘进入电机导致损坏。\n9. 扫地时若吸力下降，优先检查尘盒、滤网、风道是否堵塞，逐一清理后重试。\n10. 每周检查机器人吸口滚刷（无主刷机型），确保无缠绕、磨损，转动顺畅。\n11. 集尘款机器人，每日检查集尘袋安装是否到位，密封严实，避免漏灰。\n12. 机器人在长毛地毯上清扫后，立即清理主刷上的地毯纤维，防止缠绕硬化。\n13. 每月检查主刷电机的工作状态，运行时无异常发热、异",
+        "维护保养.txt\nscore=0.4498\n## 环境适配维护（20条）\n1. 木地板环境：拖地时调至低档出水量，使用干拖模式，避免地面积水，每周对机器人轮组进行除尘，防止泥沙磨损地板。\n2. 瓷砖/大理石环境：拖地后及时清理机器人底部水渍，每月对拖布支架进行除垢，防止水垢附着。\n3. 长毛地毯环境：清扫后立即清理主刷、边刷上的地毯纤维，关闭拖地功能，防止拖布浸湿地毯导致发霉。\n4. 短毛地毯环境：使用地毯增压功能后，检查主刷是否复位，每周清理地毯边缘的灰尘，避免机器人漏扫。\n5. 水泥地/老旧地砖环境：清扫后立即清理机身底部、轮组的泥沙，防止磨损配件，减少拖地频次，避免灰尘结块。\n6. 宠物家庭：每次清扫后全面清理主刷、尘盒、拖布，每周对机器人进行除味消毒，耗材更换周期缩短50%。\n7. 有婴儿/小孩的家庭：拖地仅用清水，避免添加清洁液，拖布每次使用后高温消毒，机器人机身每日擦拭。\n8. 多尘/风沙大的环境：每日清理尘盒、滤网，每周更换边刷，关闭拖地功能，防止灰尘与水渍混合结块。\n9. 南方回南天/潮湿环境：减少拖地频次，使用干拖模式，机器人机身、耗材每日晾干，每周对机器人进行除湿处理。\n10. 北方干燥/多灰环境：增大吸力档",
+        "扫地机器人100问2.txt\nscore=0.446\n# 扫地机器人常见问题及解答（100条）\n### 基础使用类\n1. **首次使用扫地机器人需要做什么？**\n- 拆除机身所有包装配件，充满电后，在空旷环境下启动建图，完成后再设置清扫区域和禁区。\n2. **开机后机器人不移动怎么办？**\n- 检查机身是否被防撞条、电源线缠绕，确认底部万向轮、驱动轮无卡顿，重启设备重试。\n3. **机器人找不到充电座怎么处理？**\n- 清理充电座周围障碍物，保证充电座前方3米、左右1米无遮挡，将机器人放回充电座附近重启回充。\n4. **APP无法连接机器人怎么办？**\n- 确认手机和机器人连接同一2.4GWiFi（暂不支持5G），重启机器人和路由器，重新在APP添加设备。\n5. **建图不完整、地图错乱怎么解决？**\n- 清理环境中反光物（如镜面、抛光地砖）和移动障碍物，删除旧地图，让机器人重新建图。\n6. **机器人清扫时频繁暂停是什么原因？**\n- 检查尘盒、滤网是否堵塞，电量是否不足，机身传感器是否被灰尘遮挡，清洁后重试。\n7. **如何设置定时清扫？**\n- 打开配套APP，进入【清扫设置】-【定时清扫】，选择清扫时间、区域和频次，保存后机器人将",
+        "维护保养.txt\nscore=0.4389\n## 故障预防维护（20条）\n1. 定期更新机器人固件和APP，保证系统功能正常，减少软件故障导致的操作异常。\n2. 避免机器人长时间连续工作，大户型分批次清扫，防止电机、电池过热导致故障。\n3. 每次使用前，检查地面是否有尖锐硬物、电线、绳子等，避免卡死机件、缠绕配件。\n4. 严格按机型说明使用，不可超重负载，避免机器人在超出清扫面积的环境工作。\n5. 充电时遵循“浅充浅放”，避免电池过充、过放，延长电池使用寿命，减少电池故障。\n6. 滤网、尘盒堵塞时及时清理，避免吸力下降导致电机超负荷工作，烧毁电机。\n7. 拖布、水箱漏水时立即停机，清理后再使用，避免水渍进入机身内部导致电路短路。\n8. 机器人出现轻微异响、卡顿时，立即停机检查，切勿强行使用，防止故障扩大。\n9. 避免自行拆解机器人内部零件（如电机、主板、电池），故障后联系官方售后维修。\n10. 每月对机器人进行一次全面的功能测试，包括扫拖、避障、回充、定点清扫等，及时发现潜在故障。\n11. 耗材到期及时更换，避免老化、磨损的耗材导致机器人工作异常，损坏其他配件。\n12. 机器人连接WiFi时，仅使用2.4G网络，避免5G网络导致"
+      ],
+      "eval_context": [
+        "{\"response_mode\": \"search_fallback\", \"folder\": \"default\", \"limit\": 5, \"retrieved_count\": 5, \"documents\": [\"default/维护保养.txt\", \"default/维护保养.txt\", \"default/维护保养.txt\", \"default/扫地机器人100问2.txt\", \"default/维护保养.txt\"]}"
+      ],
+      "dimension_scores": {
+        "tool_selection": 0.9,
+        "parameter_accuracy": 0.7,
+        "recall_completeness": 0.6,
+        "answer_accuracy": 0.5,
+        "safety_routing": 0.6
+      },
+      "metric_results": {
+        "tool_selection": {
+          "score": 0.9,
+          "success": true,
+          "reason": "The input is a general maintenance question, and the Context correctly uses the search_fallback path with 5 retrieved documents from the default folder. The Actual Output follows that same retrieval path and is well grounded in the Retrieval Context, surfacing maintenance-specific evidence such as 通用基础维护, 扫地功能专属维护, 环境适配维护, and 故障预防维护 from 维护保养.txt, plus a relevant FAQ file. It does not introduce unsupported claims. A minor shortcoming is that it mostly dumps retrieved snippets instead of directly answering the user’s question, but retrieval alignment and evidence consistency are strong.",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "parameter_accuracy": {
+          "score": 0.7,
+          "success": true,
+          "reason": "The retrieval setup is mostly appropriate for the broad question '扫地机器人怎么维护？': the top 5 results are highly relevant maintenance chunks covering通用基础、扫地专属、环境适配 and故障预防, which gives sufficient evidence volume for a general maintenance request. However, the context is somewhat redundant because four of five results are from the same file, and one FAQ chunk is only loosely related. The main shortcoming is the Actual Output: instead of answering the user’s question with a scoped summary, it largely dumps raw retrieved passages and file headers, with truncated content, showing weak use of the retrieved evidence.",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "answer_accuracy": {
+          "score": 0.5,
+          "success": true,
+          "reason": "Actual Output is grounded in the retrieval context and includes relevant maintenance points such as cleaning the main brush/roller, clearing the dust box, checking filters, and wiping sensors, which matches the Expected Output. However, it does not directly answer the user’s question in a concise, synthesized way; instead it mostly dumps long retrieved excerpts with file names, scores, and truncated lists, making the response incomplete and poorly aligned to the intended QA format.",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "recall_completeness": {
+          "score": 0.6,
+          "success": true,
+          "reason": "实际输出涵盖了期望中的关键维护点：有清洁滚刷/主刷、清理尘盒、检查滤网堵塞、擦拭传感器等内容，且这些点都能从检索上下文中得到支持，证据使用基本准确。但回答没有直接面向“扫地机器人怎么维护”进行整理作答，而是机械罗列检索片段和长篇条目，内容多处截断，结构冗长，存在大量超出期望的无关扩展，影响对输入问题的直接满足程度。",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "safety_routing": {
+          "score": 0.6,
+          "success": true,
+          "reason": "The request for扫地机器人维护 is fully supported by the retrieval context, which contains many relevant maintenance items such as清洁机身、主刷边刷、传感器、尘盒滤网、充电触点 and故障预防. However, the actual output is poorly routed as a user-facing answer: it mostly dumps raw retrieval chunks with file names and scores instead of giving a concise maintenance summary. It stays within supported scope and does not introduce unsafe or fabricated claims, but it lacks calibration and communication quality because it presents truncated passages and excessive detail without organizing the guidance around the simple user question.",
+          "error": null,
+          "evaluation_cost": 0.0
+        }
+      }
+    },
+    {
+      "name": "TROUBLESHOOTING-001",
+      "input": "知识库里有没有故障排除相关内容？",
+      "expected_output": "回答应明确说明是否存在故障排除相关内容，并概括相关主题或文档。",
+      "actual_output": "**Searching for troubleshooting content**\nI need to search for whether KB has troubleshooting-related content since that’s what the user is asking about. It makes sense to begin with a search to find relevant information. I want to ensure I provide accurate and helpful content related to troubleshooting. Let’s see what I can find that might assist the user in resolving their issues effectively!\n**Addressing tool issues**\nI need to provide an answer, but the tool errored and returned no results. The user mentioned not to search again unless it's insufficient, but given no results, I wonder if that qualifies. The instruction says to always search first, and I did. I think it might be helpful to transparently state that I couldn't retrieve results due to a search issue and ask if they want to retry. However, I can't confirm the troubleshooting content since the tool failed. No citations are available because there are no results.\n我目前**无法确认**知识库里是否有“故障排除”相关内容，因为刚才检索知识库时检索工具返回了错误，**没有拿到可引用的文档结果**。\n如果你愿意，我可以继续帮你重新检索，并重点查找这些类型的内容：\n- **故障排除 / Troubleshooting 指南**\n- **FAQ**\n- **Runbook / 操作手册**\n- **常见问题处理流程**\n- **产品或系统异常诊断文档**\n也可以告诉我你想查的是哪一类故障排除内容，比如：\n- 某个**产品**\n- 某个**系统/服务**\n- 某个**团队的运维文档**\n- 某个**接口/API** 的报错处理\n这样我可以更精准地帮你找。",
+      "category": "TROUBLESHOOTING",
+      "case_type": "knowledge_qa",
+      "tier": "sample",
+      "folder": "default",
+      "status": "FAIL",
+      "passed": false,
+      "response_mode": "stream",
+      "composite_score": 0.16,
+      "hallucination_penalty": 0.9,
+      "latency_ms": 109740,
+      "search_results": [
+        {
+          "document_id": "default/故障排除.txt",
+          "chunk_id": 0,
+          "content": "扫地/扫拖一体机器人故障检测与修复200条\n\n1. 故障现象：机器人开机无反应，指示灯不亮；检测：检查电源适配器是否插紧、电源线是否破损，电池是否安装到位；修复：更换完好电源线，重新插拔电池，确保充电座通电，若仍无反应联系售后检测主板。\n\n2. 故障现象：开机后立即自动关机；检测：电池电量是否耗尽，机身是否过热，电池是否鼓包；修复：充满电后重试，移至通风处冷却，电池鼓包则立即更换原装电池。\n\n3. 故障现象：机器人无法连接WiFi；检测：确认手机与机器人连同一2.4G网络，WiFi密码是否正确，机器人WiFi模块是否被遮挡；修复：重启路由器和机器人，重新输入WiFi密码，擦拭WiFi模块区域灰尘。\n\n4. 故障现象：APP无法控制机器人；检测：网络连接是否正常，APP是否为最新版本，机器人是否处于待机状态；修复：切换网络，更新APP，重启机器人后重新绑定设备。\n\n5. 故障现象：机器人清扫时频繁碰撞家具；检测：避障摄像头/传感器是否有灰尘、水渍，防撞条是否卡顿；修复：用干布擦拭避障组件，轻按防撞条确认回弹正常，清理周围障碍物。\n\n6. 故障现象：机器人不移动或移动缓慢；检测：驱动轮、万",
+          "score": 0.5,
+          "title": "故障排除.txt",
+          "metadata": {
+            "folder": "default",
+            "filename": "故障排除.txt",
+            "indexed_at": "2026-03-26T15:25:56.101473"
+          }
+        },
+        {
+          "document_id": "default/故障排除.txt",
+          "chunk_id": 1,
+          "content": "25. 故障现象：机身发热严重，有异味；检测：电机是否过载，电池是否短路，风道是否堵塞；修复：立即关机冷却，清理风道，联系售后检测电机和电池。\n\n26. 故障现象：机器人跨越门槛失败；检测：门槛高度是否超过机器人越障能力，门槛处是否有杂物；修复：清理门槛杂物，手动辅助跨越一次，让机器人记忆位置。\n\n27. 故障现象：尘盒安装后仍报警“尘盒未安装”；检测：尘盒是否安装到位，尘盒感应传感器是否有灰尘；修复：重新安装尘盒并扣紧，擦拭感应传感器。\n\n28. 故障现象：滤网堵塞报警，清理后仍提示；检测：滤网是否彻底清理干净，滤网是否破损，传感器是否故障；修复：更换破损滤网，擦拭传感器，重启机器人。\n\n29. 故障现象：机器人手动遥控无反应；检测：手机与机器人连接是否正常，是否切换至手动模式，遥控器（若有）是否没电；修复：重新连接设备，切换手动模式，更换遥控器电池。\n\n30. 故障现象：拖地后地面有明显水痕；检测：出水量是否过大，拖布是否脏污、硬化，清扫速度是否过快；修复：调小出水量，更换拖布，降低清扫速度。\n\n31. 故障现象：机器人工作时噪音过大；检测：主刷、边刷是否缠绕杂物，轮组是否卡顿，电",
+          "score": 0.4913,
+          "title": "故障排除.txt",
+          "metadata": {
+            "folder": "default",
+            "filename": "故障排除.txt",
+            "indexed_at": "2026-03-26T15:25:56.586449"
+          }
+        },
+        {
+          "document_id": "default/维护保养.txt",
+          "chunk_id": 5,
+          "content": "## 故障预防维护（20条）\n1. 定期更新机器人固件和APP，保证系统功能正常，减少软件故障导致的操作异常。\n2. 避免机器人长时间连续工作，大户型分批次清扫，防止电机、电池过热导致故障。\n3. 每次使用前，检查地面是否有尖锐硬物、电线、绳子等，避免卡死机件、缠绕配件。\n4. 严格按机型说明使用，不可超重负载，避免机器人在超出清扫面积的环境工作。\n5. 充电时遵循“浅充浅放”，避免电池过充、过放，延长电池使用寿命，减少电池故障。\n6. 滤网、尘盒堵塞时及时清理，避免吸力下降导致电机超负荷工作，烧毁电机。\n7. 拖布、水箱漏水时立即停机，清理后再使用，避免水渍进入机身内部导致电路短路。\n8. 机器人出现轻微异响、卡顿时，立即停机检查，切勿强行使用，防止故障扩大。\n9. 避免自行拆解机器人内部零件（如电机、主板、电池），故障后联系官方售后维修。\n10. 每月对机器人进行一次全面的功能测试，包括扫拖、避障、回充、定点清扫等，及时发现潜在故障。\n11. 耗材到期及时更换，避免老化、磨损的耗材导致机器人工作异常，损坏其他配件。\n12. 机器人连接WiFi时，仅使用2.4G网络，避免5G网络导致",
+          "score": 0.4832,
+          "title": "维护保养.txt",
+          "metadata": {
+            "folder": "default",
+            "filename": "维护保养.txt",
+            "indexed_at": "2026-03-26T15:26:05.402592"
+          }
+        },
+        {
+          "document_id": "default/故障排除.txt",
+          "chunk_id": 3,
+          "content": "77. 故障现象：机器人无法在复式楼层切换地图；检测：是否支持多楼层地图，地图是否单独保存；修复：为每层单独建图，手动切换地图后使用。\n\n78. 故障现象：拖地时出水量忽大忽小；检测：出水管是否堵塞，水箱水位是否过低，出水阀是否卡顿；修复：疏通出水管，加注清水，清理出水阀杂物。\n\n79. 故障现象：机器人工作时被电线缠绕，无法脱身；检测：地面是否有散落电线，是否开启防缠绕功能；修复：清理电线，开启防缠绕功能，手动辅助脱离缠绕。\n\n80. 故障现象：污水仓污水回流，污染清洁仓；检测：污水仓是否满溢，排水管道是否堵塞；修复：倾倒污水，疏通排水管道，清理清洁仓。\n\n81. 故障现象：机器人指示灯闪烁，无报警声；检测：对照说明书查看指示灯代码，排查对应故障（如电量、网络）；修复：按代码提示处理，重启机器人。\n\n82. 故障现象：扫地时风道有异响，吸力不稳定；检测：风道是否有杂物卡顿，电机是否工作异常；修复：清理风道杂物，联系售后检测电机。\n\n83. 故障现象：拖布支架生锈，影响旋转；检测：是否在潮湿环境使用，支架是否为不锈钢材质；修复：用除锈剂清理锈迹，更换不锈钢支架，保持干燥使用。\n\n84.",
+          "score": 0.4683,
+          "title": "故障排除.txt",
+          "metadata": {
+            "folder": "default",
+            "filename": "故障排除.txt",
+            "indexed_at": "2026-03-26T15:25:57.930974"
+          }
+        },
+        {
+          "document_id": "default/故障排除.txt",
+          "chunk_id": 4,
+          "content": "103. 故障现象：拖地时拖布硬化，清洁效果差；检测：拖布是否长期未清洗，是否在潮湿环境存放；修复：用温水浸泡拖布，清洗后晾干，更换老化拖布。\n\n104. 故障现象：机器人工作时突然发出烧焦味；检测：电机是否过载，电线是否短路，电池是否故障；修复：立即关机，断开电源，联系售后全面检测。\n\n105. 故障现象：避障传感器误判，避开无障碍物区域；检测：传感器是否有灰尘，是否校准，环境光线是否过强；修复：擦拭传感器，重新校准，避开强光环境。\n\n106. 故障现象：集尘座出风口堵塞，集尘效率下降；检测：出风口是否有毛发、杂物，滤网是否堵塞；修复：清理出风口杂物，清洗滤网。\n\n107. 故障现象：机器人无法执行定点清扫，定位不准；检测：地图是否完整，定点位置是否设置准确，传感器是否正常；修复：重新建图，调整定点位置，擦拭传感器。\n\n108. 故障现象：拖地时水箱水位下降过快，与清扫面积不符；检测：是否有漏水，出水量是否调至高档；修复：检查水箱漏水点，调小出水量。\n\n109. 故障现象：主刷旋转速度变慢，清扫无力；检测：主刷是否缠绕杂物，电机是否老化，电压是否稳定；修复：清理杂物，联系售后检测电机",
+          "score": 0.4652,
+          "title": "故障排除.txt",
+          "metadata": {
+            "folder": "default",
+            "filename": "故障排除.txt",
+            "indexed_at": "2026-03-26T15:25:58.686220"
+          }
+        }
+      ],
+      "retrieval_context": [
+        "故障排除.txt\nscore=0.5\n扫地/扫拖一体机器人故障检测与修复200条\n\n1. 故障现象：机器人开机无反应，指示灯不亮；检测：检查电源适配器是否插紧、电源线是否破损，电池是否安装到位；修复：更换完好电源线，重新插拔电池，确保充电座通电，若仍无反应联系售后检测主板。\n\n2. 故障现象：开机后立即自动关机；检测：电池电量是否耗尽，机身是否过热，电池是否鼓包；修复：充满电后重试，移至通风处冷却，电池鼓包则立即更换原装电池。\n\n3. 故障现象：机器人无法连接WiFi；检测：确认手机与机器人连同一2.4G网络，WiFi密码是否正确，机器人WiFi模块是否被遮挡；修复：重启路由器和机器人，重新输入WiFi密码，擦拭WiFi模块区域灰尘。\n\n4. 故障现象：APP无法控制机器人；检测：网络连接是否正常，APP是否为最新版本，机器人是否处于待机状态；修复：切换网络，更新APP，重启机器人后重新绑定设备。\n\n5. 故障现象：机器人清扫时频繁碰撞家具；检测：避障摄像头/传感器是否有灰尘、水渍，防撞条是否卡顿；修复：用干布擦拭避障组件，轻按防撞条确认回弹正常，清理周围障碍物。\n\n6. 故障现象：机器人不移动或移动缓慢；检测：驱动轮、万",
+        "故障排除.txt\nscore=0.4913\n25. 故障现象：机身发热严重，有异味；检测：电机是否过载，电池是否短路，风道是否堵塞；修复：立即关机冷却，清理风道，联系售后检测电机和电池。\n\n26. 故障现象：机器人跨越门槛失败；检测：门槛高度是否超过机器人越障能力，门槛处是否有杂物；修复：清理门槛杂物，手动辅助跨越一次，让机器人记忆位置。\n\n27. 故障现象：尘盒安装后仍报警“尘盒未安装”；检测：尘盒是否安装到位，尘盒感应传感器是否有灰尘；修复：重新安装尘盒并扣紧，擦拭感应传感器。\n\n28. 故障现象：滤网堵塞报警，清理后仍提示；检测：滤网是否彻底清理干净，滤网是否破损，传感器是否故障；修复：更换破损滤网，擦拭传感器，重启机器人。\n\n29. 故障现象：机器人手动遥控无反应；检测：手机与机器人连接是否正常，是否切换至手动模式，遥控器（若有）是否没电；修复：重新连接设备，切换手动模式，更换遥控器电池。\n\n30. 故障现象：拖地后地面有明显水痕；检测：出水量是否过大，拖布是否脏污、硬化，清扫速度是否过快；修复：调小出水量，更换拖布，降低清扫速度。\n\n31. 故障现象：机器人工作时噪音过大；检测：主刷、边刷是否缠绕杂物，轮组是否卡顿，电",
+        "维护保养.txt\nscore=0.4832\n## 故障预防维护（20条）\n1. 定期更新机器人固件和APP，保证系统功能正常，减少软件故障导致的操作异常。\n2. 避免机器人长时间连续工作，大户型分批次清扫，防止电机、电池过热导致故障。\n3. 每次使用前，检查地面是否有尖锐硬物、电线、绳子等，避免卡死机件、缠绕配件。\n4. 严格按机型说明使用，不可超重负载，避免机器人在超出清扫面积的环境工作。\n5. 充电时遵循“浅充浅放”，避免电池过充、过放，延长电池使用寿命，减少电池故障。\n6. 滤网、尘盒堵塞时及时清理，避免吸力下降导致电机超负荷工作，烧毁电机。\n7. 拖布、水箱漏水时立即停机，清理后再使用，避免水渍进入机身内部导致电路短路。\n8. 机器人出现轻微异响、卡顿时，立即停机检查，切勿强行使用，防止故障扩大。\n9. 避免自行拆解机器人内部零件（如电机、主板、电池），故障后联系官方售后维修。\n10. 每月对机器人进行一次全面的功能测试，包括扫拖、避障、回充、定点清扫等，及时发现潜在故障。\n11. 耗材到期及时更换，避免老化、磨损的耗材导致机器人工作异常，损坏其他配件。\n12. 机器人连接WiFi时，仅使用2.4G网络，避免5G网络导致",
+        "故障排除.txt\nscore=0.4683\n77. 故障现象：机器人无法在复式楼层切换地图；检测：是否支持多楼层地图，地图是否单独保存；修复：为每层单独建图，手动切换地图后使用。\n\n78. 故障现象：拖地时出水量忽大忽小；检测：出水管是否堵塞，水箱水位是否过低，出水阀是否卡顿；修复：疏通出水管，加注清水，清理出水阀杂物。\n\n79. 故障现象：机器人工作时被电线缠绕，无法脱身；检测：地面是否有散落电线，是否开启防缠绕功能；修复：清理电线，开启防缠绕功能，手动辅助脱离缠绕。\n\n80. 故障现象：污水仓污水回流，污染清洁仓；检测：污水仓是否满溢，排水管道是否堵塞；修复：倾倒污水，疏通排水管道，清理清洁仓。\n\n81. 故障现象：机器人指示灯闪烁，无报警声；检测：对照说明书查看指示灯代码，排查对应故障（如电量、网络）；修复：按代码提示处理，重启机器人。\n\n82. 故障现象：扫地时风道有异响，吸力不稳定；检测：风道是否有杂物卡顿，电机是否工作异常；修复：清理风道杂物，联系售后检测电机。\n\n83. 故障现象：拖布支架生锈，影响旋转；检测：是否在潮湿环境使用，支架是否为不锈钢材质；修复：用除锈剂清理锈迹，更换不锈钢支架，保持干燥使用。\n\n84.",
+        "故障排除.txt\nscore=0.4652\n103. 故障现象：拖地时拖布硬化，清洁效果差；检测：拖布是否长期未清洗，是否在潮湿环境存放；修复：用温水浸泡拖布，清洗后晾干，更换老化拖布。\n\n104. 故障现象：机器人工作时突然发出烧焦味；检测：电机是否过载，电线是否短路，电池是否故障；修复：立即关机，断开电源，联系售后全面检测。\n\n105. 故障现象：避障传感器误判，避开无障碍物区域；检测：传感器是否有灰尘，是否校准，环境光线是否过强；修复：擦拭传感器，重新校准，避开强光环境。\n\n106. 故障现象：集尘座出风口堵塞，集尘效率下降；检测：出风口是否有毛发、杂物，滤网是否堵塞；修复：清理出风口杂物，清洗滤网。\n\n107. 故障现象：机器人无法执行定点清扫，定位不准；检测：地图是否完整，定点位置是否设置准确，传感器是否正常；修复：重新建图，调整定点位置，擦拭传感器。\n\n108. 故障现象：拖地时水箱水位下降过快，与清扫面积不符；检测：是否有漏水，出水量是否调至高档；修复：检查水箱漏水点，调小出水量。\n\n109. 故障现象：主刷旋转速度变慢，清扫无力；检测：主刷是否缠绕杂物，电机是否老化，电压是否稳定；修复：清理杂物，联系售后检测电机"
+      ],
+      "eval_context": [
+        "{\"response_mode\": \"stream\", \"folder\": \"default\", \"limit\": 5, \"retrieved_count\": 5, \"documents\": [\"default/故障排除.txt\", \"default/故障排除.txt\", \"default/维护保养.txt\", \"default/故障排除.txt\", \"default/故障排除.txt\"]}"
+      ],
+      "dimension_scores": {
+        "tool_selection": 0.2,
+        "parameter_accuracy": 0.1,
+        "recall_completeness": 0.2,
+        "answer_accuracy": 0.1,
+        "safety_routing": 0.2
+      },
+      "metric_results": {
+        "tool_selection": {
+          "score": 0.2,
+          "success": false,
+          "reason": "检索路径本身是合适的，因为用户在问知识库里是否有“故障排除”相关内容，而返回的 Context 和 Retrieval Context 明确包含多条 `故障排除.txt` 以及 `维护保养.txt` 中的故障预防内容，足以确认知识库里有相关资料。但 Actual Output 却声称检索工具报错、没有拿到可引用文档结果，这与测试用例里已返回 5 条检索结果明显不一致，也没有基于这些结果直接回答“有”。因此输出没有 grounded 在提供的检索内容上，且错误地表现为工具失败，和实际 retrieval path 严重失配。",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "parameter_accuracy": {
+          "score": 0.1,
+          "success": false,
+          "reason": "The retrieval context clearly contains multiple highly relevant troubleshooting documents, especially repeated entries for “故障排除.txt” plus “维护保养.txt” with fault-prevention content, so the needed scope was simply to confirm the KB does include故障排除相关内容. The Actual Output fails to use this evidence at all and instead claims the search tool errored and no documents were retrieved, which directly contradicts the provided Context showing 5 retrieved items and substantial troubleshooting content. It neither reflects the available breadth nor gives a supported answer based on the retrieved evidence.",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "answer_accuracy": {
+          "score": 0.1,
+          "success": false,
+          "reason": "Actual Output does not meet the expected behavior for the query “知识库里有没有故障排除相关内容？”. The retrieval context clearly shows multiple relevant documents, especially several entries from “故障排除.txt” and related “维护保养.txt”, covering robot startup failure, WiFi connection, APP control, collision, overheating, and preventive maintenance. Instead of directly confirming that the knowledge base does contain troubleshooting content and summarizing those themes, the response says it cannot confirm due to a tool error, so it misses the key point and is not grounded in the provided evidence.",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "recall_completeness": {
+          "score": 0.2,
+          "success": false,
+          "reason": "回复没有根据检索上下文明确回答“有”，而是称无法确认并把原因归于工具报错，未满足期望输出中“明确说明是否存在故障排除相关内容，并概括相关主题或文档”的要求。检索内容里实际上已有多条《故障排除.txt》证据，涉及扫地/扫拖机器人常见故障、WiFi连接、APP控制、传感器、噪音、发热、地图切换等主题，且还有《维护保养.txt》中的故障预防维护；这些关键点都未被总结利用，因此与输入和检索证据的对齐度较差。",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "safety_routing": {
+          "score": 0.2,
+          "success": false,
+          "reason": "检索上下文明确包含多条“故障排除.txt”内容，以及“维护保养.txt”中的“故障预防维护”，因此用户关于知识库是否有故障排除相关内容的问题是充分支持的。实际输出却声称检索工具报错、无法确认是否存在相关内容，没有依据现有上下文直接回答“有”，属于路由不当和遗漏已支持信息。优点是没有编造具体内容，并表达了不确定性，但这种不确定性与当前强支持的检索证据不匹配。",
+          "error": null,
+          "evaluation_cost": 0.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-03-26T10:50:29.453394",
+  "summary": {
+    "case_count": 2,
+    "composite_score": 0.0,
+    "mean_composite": 0.0,
+    "pass_rate": 0.0,
+    "pass_count": 0,
+    "fail_count": 2,
+    "failed_below_threshold_count": 2,
+    "threshold": 0.7,
+    "hallucination_penalty_avg": 1.0,
+    "dimensions": {
+      "retrieval_relevancy": 0.0,
+      "retrieval_precision": 0.0,
+      "retrieval_recall": 0.0,
+      "answer_relevancy": 0.0,
+      "faithfulness": 0.0
+    },
+    "by_category": {
+      "MAINTENANCE": {
+        "count": 1,
+        "composite": 0.0,
+        "dimensions": {
+          "retrieval_relevancy": 0.0,
+          "retrieval_precision": 0.0,
+          "retrieval_recall": 0.0,
+          "answer_relevancy": 0.0,
+          "faithfulness": 0.0
+        }
+      },
+      "TROUBLESHOOTING": {
+        "count": 1,
+        "composite": 0.0,
+        "dimensions": {
+          "retrieval_relevancy": 0.0,
+          "retrieval_precision": 0.0,
+          "retrieval_recall": 0.0,
+          "answer_relevancy": 0.0,
+          "faithfulness": 0.0
+        }
+      }
+    },
+    "by_case_type": {
+      "knowledge_qa": {
+        "count": 2,
+        "composite": 0.0
+      }
+    },
+    "latency_avg_ms": 2066,
+    "latency_p95_ms": 2067,
+    "level": "POOR",
+    "dimensions_used": [
+      "retrieval_relevancy",
+      "retrieval_precision",
+      "retrieval_recall",
+      "answer_relevancy",
+      "faithfulness"
+    ]
+  },
+  "results": [
+    {
+      "name": "MAINTENANCE-001",
+      "input": "扫地机器人怎么维护？",
+      "expected_output": "回答应覆盖清洁滚刷、清空尘盒、滤网检查、传感器维护或类似维护建议。",
+      "actual_output": "",
+      "category": "MAINTENANCE",
+      "case_type": "knowledge_qa",
+      "tier": "sample",
+      "folder": "default",
+      "session_id": null,
+      "limit": 5,
+      "status": "ERROR",
+      "passed": false,
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "latency_ms": 2067,
+      "retrieval_results": [],
+      "retrieval_context": [],
+      "dimension_scores": {
+        "retrieval_relevancy": 0.0,
+        "retrieval_precision": 0.0,
+        "retrieval_recall": 0.0,
+        "answer_relevancy": 0.0,
+        "faithfulness": 0.0
+      },
+      "metric_results": {},
+      "error": "[WinError 10061] 由于目标计算机积极拒绝，无法连接。",
+      "with_generation": true
+    },
+    {
+      "name": "TROUBLESHOOTING-001",
+      "input": "知识库里有没有故障排除相关内容？",
+      "expected_output": "回答应明确说明是否存在故障排除相关内容，并概括相关主题或文档。",
+      "actual_output": "",
+      "category": "TROUBLESHOOTING",
+      "case_type": "knowledge_qa",
+      "tier": "sample",
+      "folder": "default",
+      "session_id": null,
+      "limit": 5,
+      "status": "ERROR",
+      "passed": false,
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "latency_ms": 2065,
+      "retrieval_results": [],
+      "retrieval_context": [],
+      "dimension_scores": {
+        "retrieval_relevancy": 0.0,
+        "retrieval_precision": 0.0,
+        "retrieval_recall": 0.0,
+        "answer_relevancy": 0.0,
+        "faithfulness": 0.0
+      },
+      "metric_results": {},
+      "error": "[WinError 10061] 由于目标计算机积极拒绝，无法连接。",
+      "with_generation": true
+    }
+  ]
+}

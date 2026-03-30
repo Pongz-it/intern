@@ -1,0 +1,263 @@
+{
+  "name": "external_db",
+  "tables": [
+    {
+      "name": "alembic_version",
+      "description": "Table alembic_version with columns: version_num",
+      "columns": [
+        {
+          "name": "version_num",
+          "type": "character varying",
+          "is_nullable": false,
+          "sample_values": [
+            "001"
+          ]
+        }
+      ],
+      "sample_data": [
+        {
+          "version_num": "001"
+        }
+      ],
+      "is_external": true
+    },
+    {
+      "name": "ingestion_items",
+      "description": "Table ingestion_items with columns: id, tenant_id, source_type, source_uri, file_name",
+      "columns": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "is_nullable": false,
+          "sample_values": [
+            "e6bcd1f7-db61-4ccc-96ce-e0eff779c238",
+            "cd83f73e-c685-4abe-a337-6036ecaae731",
+            "da0c58d5-fca3-4a17-b38e-d86bf4dad881"
+          ]
+        },
+        {
+          "name": "tenant_id",
+          "type": "character varying",
+          "is_nullable": false,
+          "sample_values": [
+            "vespa_test",
+            "vespa_test",
+            "vespa_test"
+          ]
+        },
+        {
+          "name": "source_type",
+          "type": "USER-DEFINED",
+          "is_nullable": false,
+          "sample_values": [
+            "file",
+            "file",
+            "file"
+          ]
+        },
+        {
+          "name": "source_uri",
+          "type": "text",
+          "is_nullable": false,
+          "sample_values": [
+            "/Users/admin/Desktop/agent/agent_rag/uploads/vespa_test/README.md",
+            "/Users/admin/Desktop/agent/agent_rag/uploads/vespa_test/README.md",
+            "/Users/admin/Desktop/agent/agent_rag/uploads/vespa_test/README.md"
+          ]
+        },
+        {
+          "name": "file_name",
+          "type": "character varying",
+          "is_nullable": false,
+          "sample_values": [
+            "README.md",
+            "README.md",
+            "README.md"
+          ]
+        },
+        {
+          "name": "mime_type",
+          "type": "character varying",
+          "is_nullable": true,
+          "sample_values": [
+            "None",
+            "None",
+            "None"
+          ]
+        },
+        {
+          "name": "size_bytes",
+          "type": "bigint",
+          "is_nullable": false,
+          "sample_values": [
+            "7460",
+            "7460",
+            "7460"
+          ]
+        },
+        {
+          "name": "content_hash",
+          "type": "character varying",
+          "is_nullable": false,
+          "sample_values": [
+            "49b4507c858f0df5abd7a0845bb27412dbc37d2c81bc045282c3db392f4bd033",
+            "49b4507c858f0df5abd7a0845bb27412dbc37d2c81bc045282c3db392f4bd033",
+            "49b4507c858f0df5abd7a0845bb27412dbc37d2c81bc045282c3db392f4bd033"
+          ]
+        },
+        {
+          "name": "content_ref",
+          "type": "text",
+          "is_nullable": true,
+          "sample_values": [
+            "raw/vespa_test/e6bcd1f7-db61-4ccc-96ce-e0eff779c238/README.md",
+            "raw/vespa_test/cd83f73e-c685-4abe-a337-6036ecaae731/README.md",
+            "raw/vespa_test/da0c58d5-fca3-4a17-b38e-d86bf4dad881/README.md"
+          ]
+        },
+        {
+          "name": "parsed_ref",
+          "type": "text",
+          "is_nullable": true,
+          "sample_values": [
+            "None",
+            "parsed/vespa_test/cd83f73e-c685-4abe-a337-6036ecaae731/text.md",
+            "None"
+          ]
+        },
+        {
+          "name": "status",
+          "type": "USER-DEFINED",
+          "is_nullable": false,
+          "sample_values": [
+            "PROCESSING",
+            "FAILED",
+            "FAILED"
+          ]
+        },
+        {
+          "name": "error",
+          "type": "text",
+          "is_nullable": true,
+          "sample_values": [
+            "None",
+            "{'chunk-document': 'DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class \\'asyncpg.exceptions.UntranslatableCharacterError\\'>: unsupported Unicode escape sequence\\\\\\nDETAIL:  \\\\u0000 cannot be converted to text.\\\\\\n[SQL: UPDATE ingestion_items SET chunk_count=$1::INTEGER, metadata_json=$2::JSONB, updated_at=$3::TIMESTAMP WITH TIME ZONE WHERE ingestion_items.id = $4::UUID]\\\\\\n[parameters: (4, \\'{\"folder\": \"vespa_test\", \"filename\": \"README.md\", \"indexed_via\": \"api\", \"chunks\": [{\"chunk_id\": 0, \"content\": \"# Agent RAG\\\\\\\\n\\\\\\\\nA standalone, reusabl ... (11629 characters truncated) ... \", \"metadata_suffix\": \"folder: vespa_test | filename: README.md | indexed_via: api\", \"section_continuation\": true, \"large_chunk_reference_ids\": []}]}\\', datetime.datetime(2026, 1, 23, 7, 18, 55, 437127), UUID(\\'cd83f73e-c685-4abe-a337-6036ecaae731\\'))]\\\\\\n(Background on this error at: https://sqlalche.me/e/20/dbapi)\\nTraceback (most recent call last):\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py\", line 550, in _prepare_and_execute\\n    self._rows = deque(await prepared_stmt.fetch(*parameters))\\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/asyncpg/prepared_stmt.py\", line 177, in fetch\\n    data = await self.__bind_execute(args, 0, timeout)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/asyncpg/prepared_stmt.py\", line 268, in __bind_execute\\n    data, status, _ = await self.__do_execute(\\n                      ^^^^^^^^^^^^^^^^^^^^^^^^\\n        lambda protocol: protocol.bind_execute(\\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n            self._state, args, \\'\\', limit, True, timeout))\\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/asyncpg/prepared_stmt.py\", line 257, in __do_execute\\n    return await executor(protocol)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"asyncpg/protocol/protocol.pyx\", line 205, in bind_execute\\nasyncpg.exceptions.UntranslatableCharacterError: unsupported Unicode escape sequence\\nDETAIL:  \\\\u0000 cannot be converted to text.\\n\\nThe above exception was the direct cause of the following exception:\\n\\nTraceback (most recent call last):\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py\", line 1967, in _exec_single_context\\n    self.dialect.do_execute(\\n    ~~~~~~~~~~~~~~~~~~~~~~~^\\n        cursor, str_statement, effective_parameters, context\\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n    )\\n    ^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/engine/default.py\", line 952, in do_execute\\n    cursor.execute(statement, parameters)\\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py\", line 585, in execute\\n    self._adapt_connection.await_(\\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\\n        self._prepare_and_execute(operation, parameters)\\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n    )\\n    ^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py\", line 132, in await_only\\n    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501\\n           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py\", line 196, in greenlet_spawn\\n    value = await result\\n            ^^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py\", line 563, in _prepare_and_execute\\n    self._handle_exception(error)\\n    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py\", line 513, in _handle_exception\\n    self._adapt_connection._handle_exception(error)\\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py\", line 797, in _handle_exception\\n    raise translated_error from error\\nsqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.Error: <class \\'asyncpg.exceptions.UntranslatableCharacterError\\'>: unsupported Unicode escape sequence\\nDETAIL:  \\\\u0000 cannot be converted to text.\\n\\nThe above exception was the direct cause of the following exception:\\n\\nTraceback (most recent call last):\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/hatchet_sdk/worker/runner/runner.py\", line 164, in inner_callback\\n    output = task.result()\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/hatchet_sdk/worker/runner/runner.py\", line 252, in async_wrapped_action_func\\n    return await task.aio_call(ctx, dependencies)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/hatchet_sdk/runnables/task.py\", line 370, in aio_call\\n    return await self.fn(workflow_input, cast(Context, ctx), **dependencies)  # type: ignore\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/agent_rag/ingestion/workflow/ingestion_workflow.py\", line 409, in chunk_document\\n  File \"/Users/admin/Desktop/agent/agent_rag/agent_rag/ingestion/workflow/tasks/indexing_tasks.py\", line 211, in chunk_document_task\\n    await session.commit()\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/ext/asyncio/session.py\", line 1000, in commit\\n    await greenlet_spawn(self.sync_session.commit)\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py\", line 203, in greenlet_spawn\\n    result = context.switch(value)\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py\", line 2030, in commit\\n    trans.commit(_to_root=True)\\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^\\n  File \"<string>\", line 2, in commit\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py\", line 137, in _go\\n    ret_value = fn(self, *arg, **kw)\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py\", line 1311, in commit\\n    self._prepare_impl()\\n    ~~~~~~~~~~~~~~~~~~^^\\n  File \"<string>\", line 2, in _prepare_impl\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py\", line 137, in _go\\n    ret_value = fn(self, *arg, **kw)\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py\", line 1286, in _prepare_impl\\n    self.session.flush()\\n    ~~~~~~~~~~~~~~~~~~^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py\", line 4331, in flush\\n    self._flush(objects)\\n    ~~~~~~~~~~~^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py\", line 4466, in _flush\\n    with util.safe_reraise():\\n         ~~~~~~~~~~~~~~~~~^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py\", line 224, in __exit__\\n    raise exc_value.with_traceback(exc_tb)\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py\", line 4427, in _flush\\n    flush_context.execute()\\n    ~~~~~~~~~~~~~~~~~~~~~^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py\", line 466, in execute\\n    rec.execute(self)\\n    ~~~~~~~~~~~^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py\", line 642, in execute\\n    util.preloaded.orm_persistence.save_obj(\\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\\n        self.mapper,\\n        ^^^^^^^^^^^^\\n        uow.states_for_mapper_hierarchy(self.mapper, False, False),\\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n        uow,\\n        ^^^^\\n    )\\n    ^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py\", line 85, in save_obj\\n    _emit_update_statements(\\n    ~~~~~~~~~~~~~~~~~~~~~~~^\\n        base_mapper,\\n        ^^^^^^^^^^^^\\n    ...<3 lines>...\\n        update,\\n        ^^^^^^^\\n    )\\n    ^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py\", line 912, in _emit_update_statements\\n    c = connection.execute(\\n        statement, multiparams, execution_options=execution_options\\n    )\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py\", line 1419, in execute\\n    return meth(\\n        self,\\n        distilled_parameters,\\n        execution_options or NO_OPTIONS,\\n    )\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/sql/elements.py\", line 527, in _execute_on_connection\\n    return connection._execute_clauseelement(\\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\\n        self, distilled_params, execution_options\\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n    )\\n    ^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py\", line 1641, in _execute_clauseelement\\n    ret = self._execute_context(\\n        dialect,\\n    ...<8 lines>...\\n        cache_hit=cache_hit,\\n    )\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py\", line 1846, in _execute_context\\n    return self._exec_single_context(\\n           ~~~~~~~~~~~~~~~~~~~~~~~~~^\\n        dialect, context, statement, parameters\\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n    )\\n    ^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py\", line 1986, in _exec_single_context\\n    self._handle_dbapi_exception(\\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\\n        e, str_statement, effective_parameters, cursor, context\\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n    )\\n    ^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py\", line 2363, in _handle_dbapi_exception\\n    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py\", line 1967, in _exec_single_context\\n    self.dialect.do_execute(\\n    ~~~~~~~~~~~~~~~~~~~~~~~^\\n        cursor, str_statement, effective_parameters, context\\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n    )\\n    ^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/engine/default.py\", line 952, in do_execute\\n    cursor.execute(statement, parameters)\\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py\", line 585, in execute\\n    self._adapt_connection.await_(\\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\\n        self._prepare_and_execute(operation, parameters)\\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n    )\\n    ^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py\", line 132, in await_only\\n    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501\\n           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py\", line 196, in greenlet_spawn\\n    value = await result\\n            ^^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py\", line 563, in _prepare_and_execute\\n    self._handle_exception(error)\\n    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py\", line 513, in _handle_exception\\n    self._adapt_connection._handle_exception(error)\\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py\", line 797, in _handle_exception\\n    raise translated_error from error\\nsqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class \\'asyncpg.exceptions.UntranslatableCharacterError\\'>: unsupported Unicode escape sequence\\nDETAIL:  \\\\u0000 cannot be converted to text.\\n[SQL: UPDATE ingestion_items SET chunk_count=$1::INTEGER, metadata_json=$2::JSONB, updated_at=$3::TIMESTAMP WITH TIME ZONE WHERE ingestion_items.id = $4::UUID]\\n[parameters: (4, \\'{\"folder\": \"vespa_test\", \"filename\": \"README.md\", \"indexed_via\": \"api\", \"chunks\": [{\"chunk_id\": 0, \"content\": \"# Agent RAG\\\\\\\\n\\\\\\\\nA standalone, reusabl ... (11629 characters truncated) ... \", \"metadata_suffix\": \"folder: vespa_test | filename: README.md | indexed_via: api\", \"section_continuation\": true, \"large_chunk_reference_ids\": []}]}\\', datetime.datetime(2026, 1, 23, 7, 18, 55, 437127), UUID(\\'cd83f73e-c685-4abe-a337-6036ecaae731\\'))]\\n(Background on this error at: https://sqlalche.me/e/20/dbapi)\\n\\n\\n{\"__hatchet_error_metadata__\": {\"task_run_external_id\": \"610653ab-cdfb-4224-8c97-a364532b8ae5\"}}'}",
+            "{'parse-document': 'TypeError: \\'EmptyModel\\' object is not subscriptable\\nTraceback (most recent call last):\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/hatchet_sdk/worker/runner/runner.py\", line 164, in inner_callback\\n    output = task.result()\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/hatchet_sdk/worker/runner/runner.py\", line 252, in async_wrapped_action_func\\n    return await task.aio_call(ctx, dependencies)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/.venv/lib/python3.13/site-packages/hatchet_sdk/runnables/task.py\", line 370, in aio_call\\n    return await self.fn(workflow_input, cast(Context, ctx), **dependencies)  # type: ignore\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/Users/admin/Desktop/agent/agent_rag/agent_rag/ingestion/workflow/ingestion_workflow.py\", line 212, in parse_document\\n    if dedup_output.action == \"skip\":\\n       ^^^^^^^^^^^^^^^^^^^^^^\\nTypeError: \\'EmptyModel\\' object is not subscriptable\\n\\n\\n{\"__hatchet_error_metadata__\": {\"task_run_external_id\": \"1d7cad92-34f8-4d3e-8cc5-b7302ab4f723\"}}'}"
+          ]
+        },
+        {
+          "name": "retry_count",
+          "type": "integer",
+          "is_nullable": false,
+          "sample_values": [
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "name": "last_attempt_at",
+          "type": "timestamp with time zone",
+          "is_nullable": true,
+          "sample_values": [
+            "None",
+            "None",
+            "None"
+          ]
+        },
+        {
+          "name": "document_id",
+          "type": "character varying",
+          "is_nullable": true,
+          "sample_values": [
+            "vespa_test/README.md",
+            "vespa_test/README.md",
+            "vespa_test/README.md"
+          ]
+        },
+        {
+          "name": "chunk_count",
+          "type": "integer",
+          "is_nullable": true,
+          "sample_values": [
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "name": "image_count",
+          "type": "integer",
+          "is_nullable": true,
+          "sample_values": [
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "name": "table_count",
+          "type": "integer",
+          "is_nullable": true,
+          "sample_values": [
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "name": "metadata_json",
+          "type": "jsonb",
+          "is_nullable": true,
+          "sample_values": [
+            "{'folder': 'vespa_test', 'filename': 'README.md', 'indexed_via': 'api'}",
+            "{'folder': 'vespa_test', 'filename': 'README.md', 'indexed_via': 'api'}",
+            "{'folder': 'vespa_test', 'filename': 'README.md', 'indexed_via': 'api'}"
+          ]
+        },
+        {
+          "name": "webhook_url",
+          "type": "text",
+          "is_nullable": true,
+          "sample_values": [
+            "None",
+            "None",
+            "None"
+          ]
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "is_nullable": false,
+          "sample_values": [
+            "2026-01-22 23:01:26.485929+00:00",
+            "2026-01-22 23:18:00.262555+00:00",
+            "2026-01-22 23:08:22.242256+00:00"
+          ]
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "is_nullable": false,
+          "sample_values": [
+            "2026-01-22 23:01:26.668282+00:00",
+            "2026-01-22 23:18:56.432760+00:00",
+            "2026-01-22 23:09:18.497801+00:00"
+          ]
+        },
+        {
+          "name": "completed_at",
+          "type": "timestamp with time zone",
+          "is_nullable": true,
+          "sample_values": [
+            "None",
+            "2026-01-22 23:18:56.431866+00:00",
+            "2026-01-22 23:09:18.492802+00:00"
+          ]
+        }
+      ],
+    "sample_data": [],
+    "is_external": true
+  }
+]
+}

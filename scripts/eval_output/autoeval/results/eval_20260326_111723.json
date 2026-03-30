@@ -1,0 +1,191 @@
+{
+  "generated_at": "2026-03-26T11:17:23.839339",
+  "summary": {
+    "case_count": 2,
+    "composite_score": 0.020454545454545454,
+    "mean_composite": 0.020454545454545454,
+    "pass_rate": 0.0,
+    "pass_count": 0,
+    "fail_count": 2,
+    "failed_below_threshold_count": 2,
+    "threshold": 0.7,
+    "hallucination_penalty_avg": 1.0,
+    "dimensions": {
+      "retrieval_relevancy": 0.0,
+      "retrieval_precision": 0.0,
+      "retrieval_recall": 0.0,
+      "answer_relevancy": 0.10227272727272728,
+      "faithfulness": 0.0
+    },
+    "by_category": {
+      "MAINTENANCE": {
+        "count": 1,
+        "composite": 0.0,
+        "dimensions": {
+          "retrieval_relevancy": 0.0,
+          "retrieval_precision": 0.0,
+          "retrieval_recall": 0.0,
+          "answer_relevancy": 0.0,
+          "faithfulness": 0.0
+        }
+      },
+      "TROUBLESHOOTING": {
+        "count": 1,
+        "composite": 0.04090909090909091,
+        "dimensions": {
+          "retrieval_relevancy": 0.0,
+          "retrieval_precision": 0.0,
+          "retrieval_recall": 0.0,
+          "answer_relevancy": 0.20454545454545456,
+          "faithfulness": 0.0
+        }
+      }
+    },
+    "by_case_type": {
+      "knowledge_qa": {
+        "count": 2,
+        "composite": 0.020454545454545454
+      }
+    },
+    "latency_avg_ms": 820437,
+    "latency_p95_ms": 886192,
+    "level": "POOR",
+    "dimensions_used": [
+      "retrieval_relevancy",
+      "retrieval_precision",
+      "retrieval_recall",
+      "answer_relevancy",
+      "faithfulness"
+    ]
+  },
+  "results": [
+    {
+      "name": "MAINTENANCE-001",
+      "input": "扫地机器人怎么维护？",
+      "expected_output": "回答应覆盖清洁滚刷、清空尘盒、滤网检查、传感器维护或类似维护建议。",
+      "actual_output": "**Searching Maintenance Procedures**\nI'm currently focused on pinpointing the user's need: a robot vacuum maintenance guide. My primary task is to query the internal knowledge base for company-specific resources. Failing that, I will switch to general maintenance advice, like cleaning brushes, emptying dustbins, and battery care. This ensures a comprehensive response.\n维护扫地机器人是延长其使用寿命、保持清洁效率的关键。以下是通用的维护建议：\n### 1. 定期清理核心部件\n*   **尘盒与滤网：** 建议每次清扫后或每隔2-3天清理一次尘盒。滤网（HEPA）通常不可水洗（除非说明书明确标注），建议每1-3个月更换一次，以防堵塞导致吸力下降。\n*   **主刷与边刷：** 头发和线头极易缠绕在刷头上。建议每周检查一次，使用随机附带的清理工具剪断并清除缠绕物。如果边刷变形，可以用热水烫一下使其恢复形状。\n*   **万向轮：** 这里的毛发堆积常被忽视，会导致机器人转向不灵或发出异响，建议定期拔出清理。\n### 2. 传感器与充电极片维护\n*   **传感器清洁：** 机器人底部和侧面分布着红外、悬崖传感器等。请务必使用**干爽的软布**定期擦拭，防止灰尘覆盖导致机器人“致盲”或频繁报错。\n*   **充电极片：** 机器人底部和充电座上的金属片若有污垢，会导致充电失败。建议每月用干布或橡皮擦轻轻擦拭。\n### 3. 水箱与拖布（针对扫拖一体机）\n*   **拖布清洗：** 每次使用后应立即取下拖布清洗并晾干，避免产生异味或滋生细菌。\n*   **水箱排空：** 长期不使用时，请排空水箱内的余水。建议使用纯净水以减少水垢堵塞出水口。\n### 4. 电池与系统维护\n*   **保持通电：** 建议让机器人始终处于充电座上保持通电状态，这比频繁关机更有利于保护锂电池寿命。\n*   **固件更新：** 定期在APP中检查并更新固件，以获取最新的避障算法优化和功能改进。\n### 5. 耗材更换周期参考\n*   **边刷：** 3-6个月\n*   **主刷：** 6-12个月\n*   **滤网：** 3-6个月\n**注意：** 不同品牌（如科沃斯、石头、iRobot等）的具体结构略有不同，建议在维护前查阅随机附带的用户手册。",
+      "category": "MAINTENANCE",
+      "case_type": "knowledge_qa",
+      "tier": "sample",
+      "folder": "default",
+      "session_id": "b7e8bdd8-8503-41ca-af62-3fbb14174b2e",
+      "limit": 5,
+      "status": "FAIL",
+      "passed": false,
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "latency_ms": 886192,
+      "retrieval_results": [],
+      "retrieval_context": [],
+      "dimension_scores": {
+        "retrieval_relevancy": 0.0,
+        "retrieval_precision": 0.0,
+        "retrieval_recall": 0.0,
+        "answer_relevancy": 0.0,
+        "faithfulness": 0.0
+      },
+      "metric_results": {
+        "retrieval_relevancy": {
+          "score": 0.0,
+          "success": false,
+          "reason": "The score is 0.00 because the retrieval context contains no information related to the maintenance of robot vacuums, as evidenced by the empty list of 'relevant statements' [] and 'reasons for why the retrieval context is irrelevant' [].",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "retrieval_precision": {
+          "score": 0.0,
+          "success": false,
+          "reason": "The score is 0.00 because the retrieval contexts list is entirely empty, meaning no nodes were retrieved to provide information on robot vacuum maintenance, and consequently, there are no relevant nodes to rank.",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "retrieval_recall": {
+          "score": 0.0,
+          "success": false,
+          "reason": "The score is 0.00 because Sentence 1, which outlines maintenance tasks such as cleaning roller brushes and checking sensors, cannot be attributed to any node(s) in retrieval context as the context provided is entirely empty.",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "answer_relevancy": {
+          "score": 0.0,
+          "success": false,
+          "reason": null,
+          "error": "litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out.",
+          "evaluation_cost": 0.0
+        },
+        "faithfulness": {
+          "score": 0.0,
+          "success": false,
+          "reason": null,
+          "error": "litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out.",
+          "evaluation_cost": 0.0
+        }
+      },
+      "with_generation": true
+    },
+    {
+      "name": "TROUBLESHOOTING-001",
+      "input": "知识库里有没有故障排除相关内容？",
+      "expected_output": "回答应明确说明是否存在故障排除相关内容，并概括相关主题或文档。",
+      "actual_output": "**Querying the Knowledge Base**\nI've initiated a search of the internal knowledge base using the query \"故障排除.\" My next step hinges on the search results. I'll need to analyze the returned documents to assess the extent of troubleshooting documentation available.\n**Investigating Troubleshooting Content**\nI'm now tasked with the initial internal search using \"故障排除\" as the query. After that, I will carefully summarize the types of troubleshooting content that is available. If the initial search yields minimal results, I'll broaden my search parameters to include related terms, such as \"排障\" and \"问题解决.\"\n**Initiating the Search**\nI'm now initiating the search for maintenance guides. My primary focus is robot vacuum maintenance. First, I'll query the knowledge base using \"扫地机器人 维护,\" aiming for comprehensive results. Then, I'll refine this search to focus on specific components such as brushes, filters and dustbins if the initial results are not specific enough.\n**Defining Search Terms**\nI've crafted a preliminary set of search queries. I'll begin with \"扫地机器人 维护\" to cast a wide net. Additional searches using \"保养\" and \"清洁\" will follow if needed, refining the approach to ensure a complete response. I'm focusing on robot vacuum care and cleaning processes.\n为了确保扫地机器人保持最佳清洁性能并延长使用寿命，建议定期进行以下维护保养：\n### 1. 核心部件清洁\n*   **尘盒与滤网：** 建议每次清扫后倾倒尘盒。滤网（HEPA）通常每周清理一次，可用清理刷除尘。若滤网支持水洗，请务必**完全晾干**（通常需24小时）后再装回，否则会损坏电机或产生异味。\n*   **主刷：** 每周检查一次。主刷容易缠绕头发和线段，需使用随机附带的清理工具（小刀片）切断并清除缠绕物，同时清理主刷两端的轴承。\n*   **边刷：** 每月检查一次。清理缠绕的毛发，若边刷变形，可放入温水中浸泡以恢复形状；若磨损严重则需更换。\n### 2. 传感器与充电极片\n*   **传感器：** 扫地机器人底部和侧面分布着防跌落传感器、红外避障传感器等。建议每两周使用**干软布**擦拭一次，防止灰尘遮挡导致机器人“乱撞”或报错。\n*   **充电极片：** 定期擦拭机器人底部和充电座上的金属充电触点，去除氧化层或灰尘，确保充电正常。\n### 3. 轮组清理\n*   **万向轮：** 这是最容易卡住毛发的地方。建议定期将其拔出，清理轮轴内的毛发和污垢，确保转向灵活。\n*   **驱动轮：** 检查是否有异物卡入轮缝，影响爬坡或行走。\n### 4. 水箱与拖布（针对扫拖一体机）\n*   **拖布：** 每次使用后应立即清洗并晾干，防止滋生细菌和异味。\n*   **水箱：** 长期不使用时应倒干余水。建议仅使用清水或官方指定的清洁液，避免使用洗洁精等高泡沫清洁剂，以免堵塞出水口。\n### 5. 耗材更换周期（参考值）\n*   **滤网：** 建议 3-6 个月更换。\n*   **边刷：** 建议 3-6 个月更换。\n*   **主刷：** 建议 6-12 个月更换。\n**温馨提示：** 在进行任何维护操作前，请确保机器人已**关机**。如果您的机型带有自动集尘座，请定期检查集尘袋是否装满并及时更换。",
+      "category": "TROUBLESHOOTING",
+      "case_type": "knowledge_qa",
+      "tier": "sample",
+      "folder": "default",
+      "session_id": "5062c772-f305-42dd-964a-0903ad9f9502",
+      "limit": 5,
+      "status": "FAIL",
+      "passed": false,
+      "composite_score": 0.04090909090909091,
+      "hallucination_penalty": 1.0,
+      "latency_ms": 754683,
+      "retrieval_results": [],
+      "retrieval_context": [],
+      "dimension_scores": {
+        "retrieval_relevancy": 0.0,
+        "retrieval_precision": 0.0,
+        "retrieval_recall": 0.0,
+        "answer_relevancy": 0.20454545454545456,
+        "faithfulness": 0.0
+      },
+      "metric_results": {
+        "retrieval_relevancy": {
+          "score": 0.0,
+          "success": false,
+          "reason": "The score is 0.00 because the retrieval context contains no 'relevant statements' ([]) to address the user's query regarding troubleshooting content.",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "retrieval_precision": {
+          "score": 0.0,
+          "success": false,
+          "reason": "The score is 0.00 because the retrieval contexts list is empty, meaning no nodes were retrieved to address the query about troubleshooting content, and therefore no relevant nodes could be evaluated or ranked.",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "retrieval_recall": {
+          "score": 0.0,
+          "success": false,
+          "reason": "The score is 0.00 because sentence 1 in the expected output cannot be attributed to any information as there are 0 nodes in retrieval context.",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "answer_relevancy": {
+          "score": 0.20454545454545456,
+          "success": false,
+          "reason": "The score is 0.20 because the response focuses almost entirely on specific maintenance and cleaning instructions for a robot vacuum rather than directly addressing the request for troubleshooting content. While the information relates to the correct product, the overwhelming amount of irrelevant maintenance detail fails to answer the user's specific query about troubleshooting availability.",
+          "error": null,
+          "evaluation_cost": 0.0
+        },
+        "faithfulness": {
+          "score": 0.0,
+          "success": false,
+          "reason": null,
+          "error": "litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out.",
+          "evaluation_cost": 0.0
+        }
+      },
+      "with_generation": true
+    }
+  ]
+}

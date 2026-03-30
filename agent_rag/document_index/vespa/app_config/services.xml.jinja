@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Agent RAG Vespa Services Configuration -->
+<services version="1.0">
+    <container id="default" version="1.0">
+        <search>
+            <config name="search.config.qr-start">
+                <jvm>
+                    <gcopts>-XX:+UseG1GC</gcopts>
+                </jvm>
+            </config>
+        </search>
+        <document-api/>
+        <document-processing/>
+        <nodes>
+            <node hostalias="node1"/>
+        </nodes>
+    </container>
+
+    <content id="{{ schema_name }}" version="1.0">
+        <redundancy>{{ redundancy }}</redundancy>
+        <documents>
+            <document type="{{ schema_name }}" mode="index"/>
+        </documents>
+        <nodes>
+            <node hostalias="node1" distribution-key="0"/>
+        </nodes>
+        <engine>
+            <proton>
+                <searchable-copies>{{ searchable_copies }}</searchable-copies>
+                <tuning>
+                    <searchnode>
+                        <requestthreads>
+                            <search>{{ search_threads }}</search>
+                            <summary>{{ summary_threads }}</summary>
+                        </requestthreads>
+                    </searchnode>
+                </tuning>
+            </proton>
+        </engine>
+    </content>
+</services>

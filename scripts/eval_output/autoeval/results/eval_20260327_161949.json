@@ -1,0 +1,603 @@
+{
+  "generated_at": "2026-03-27T16:19:49.193334",
+  "summary": {
+    "case_count": 15,
+    "composite_score": 0.0,
+    "mean_composite": 0.0,
+    "pass_rate": 0.0,
+    "pass_count": 0,
+    "fail_count": 15,
+    "failed_below_threshold_count": 15,
+    "threshold": 0.5,
+    "hallucination_penalty_avg": 1.0,
+    "dimensions": {
+      "tool_selection": 0.0,
+      "parameter_accuracy": 0.0,
+      "recall_completeness": 0.0,
+      "answer_accuracy": 0.0,
+      "safety_routing": 0.0
+    },
+    "by_category": {
+      "BASIC-USE": {
+        "count": 3,
+        "composite": 0.0,
+        "dimensions": {
+          "tool_selection": 0.0,
+          "parameter_accuracy": 0.0,
+          "recall_completeness": 0.0,
+          "answer_accuracy": 0.0,
+          "safety_routing": 0.0
+        }
+      },
+      "CLEANING": {
+        "count": 2,
+        "composite": 0.0,
+        "dimensions": {
+          "tool_selection": 0.0,
+          "parameter_accuracy": 0.0,
+          "recall_completeness": 0.0,
+          "answer_accuracy": 0.0,
+          "safety_routing": 0.0
+        }
+      },
+      "CONSUMABLES": {
+        "count": 1,
+        "composite": 0.0,
+        "dimensions": {
+          "tool_selection": 0.0,
+          "parameter_accuracy": 0.0,
+          "recall_completeness": 0.0,
+          "answer_accuracy": 0.0,
+          "safety_routing": 0.0
+        }
+      },
+      "TROUBLESHOOTING": {
+        "count": 2,
+        "composite": 0.0,
+        "dimensions": {
+          "tool_selection": 0.0,
+          "parameter_accuracy": 0.0,
+          "recall_completeness": 0.0,
+          "answer_accuracy": 0.0,
+          "safety_routing": 0.0
+        }
+      },
+      "ALARM": {
+        "count": 1,
+        "composite": 0.0,
+        "dimensions": {
+          "tool_selection": 0.0,
+          "parameter_accuracy": 0.0,
+          "recall_completeness": 0.0,
+          "answer_accuracy": 0.0,
+          "safety_routing": 0.0
+        }
+      },
+      "MOPPING": {
+        "count": 2,
+        "composite": 0.0,
+        "dimensions": {
+          "tool_selection": 0.0,
+          "parameter_accuracy": 0.0,
+          "recall_completeness": 0.0,
+          "answer_accuracy": 0.0,
+          "safety_routing": 0.0
+        }
+      },
+      "MAINTENANCE": {
+        "count": 2,
+        "composite": 0.0,
+        "dimensions": {
+          "tool_selection": 0.0,
+          "parameter_accuracy": 0.0,
+          "recall_completeness": 0.0,
+          "answer_accuracy": 0.0,
+          "safety_routing": 0.0
+        }
+      },
+      "BUYING": {
+        "count": 2,
+        "composite": 0.0,
+        "dimensions": {
+          "tool_selection": 0.0,
+          "parameter_accuracy": 0.0,
+          "recall_completeness": 0.0,
+          "answer_accuracy": 0.0,
+          "safety_routing": 0.0
+        }
+      }
+    },
+    "by_case_type": {
+      "procedure": {
+        "count": 1,
+        "composite": 0.0
+      },
+      "configuration": {
+        "count": 2,
+        "composite": 0.0
+      },
+      "symptom_search": {
+        "count": 6,
+        "composite": 0.0
+      },
+      "exact_spec": {
+        "count": 2,
+        "composite": 0.0
+      },
+      "maintenance": {
+        "count": 2,
+        "composite": 0.0
+      },
+      "comparison": {
+        "count": 2,
+        "composite": 0.0
+      }
+    },
+    "response_latency_avg_ms": 4138,
+    "response_latency_p95_ms": 4171,
+    "judge_latency_avg_ms": 0,
+    "judge_latency_p95_ms": 0,
+    "latency_avg_ms": 4138,
+    "latency_p95_ms": 4171,
+    "level": "POOR",
+    "dimensions_used": [
+      "tool_selection",
+      "parameter_accuracy",
+      "recall_completeness",
+      "answer_accuracy",
+      "safety_routing"
+    ]
+  },
+  "results": [
+    {
+      "name": "BASIC-USE-001",
+      "input": "扫地机器人首次使用需要做什么？",
+      "expected_output": "回答应提到拆除包装配件、先充满电、在空旷环境下首次建图，建图完成后再设置清扫区域和禁区。",
+      "actual_output": "",
+      "category": "BASIC-USE",
+      "case_type": "procedure",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4135,
+      "judge_latency_ms": 0,
+      "latency_ms": 4135,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "BASIC-USE-002",
+      "input": "APP连不上机器人怎么排查？",
+      "expected_output": "回答应提到手机和机器人需连接同一 2.4G WiFi、不支持 5G，必要时重启机器人和路由器并在 APP 中重新添加设备。",
+      "actual_output": "",
+      "category": "BASIC-USE",
+      "case_type": "configuration",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4117,
+      "judge_latency_ms": 0,
+      "latency_ms": 4117,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "BASIC-USE-003",
+      "input": "机器人总是找不到充电座，应该怎么处理？",
+      "expected_output": "回答应提到清理充电座周围障碍物，保证充电座前方约 3 米、左右约 1 米无遮挡，并可将机器人放回充电座附近后重新尝试回充。",
+      "actual_output": "",
+      "category": "BASIC-USE",
+      "case_type": "symptom_search",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4117,
+      "judge_latency_ms": 0,
+      "latency_ms": 4117,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "CLEANING-001",
+      "input": "拖地后地面有明显水渍和水痕怎么办？",
+      "expected_output": "回答应提到调小出水量、更换或清洗干净拖布，并可切换到干拖或低速拖地，避免机器人在同一区域反复停留。",
+      "actual_output": "",
+      "category": "CLEANING",
+      "case_type": "symptom_search",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4150,
+      "judge_latency_ms": 0,
+      "latency_ms": 4150,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "CLEANING-002",
+      "input": "家里有宠物，机器人老是漏掉毛发，怎么改善？",
+      "expected_output": "回答应提到清理主刷缠绕毛发、必要时更换宠物专用防缠绕主刷，并把吸力调高或开启毛发清理模式。",
+      "actual_output": "",
+      "category": "CLEANING",
+      "case_type": "symptom_search",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4150,
+      "judge_latency_ms": 0,
+      "latency_ms": 4150,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "CONSUMABLES-001",
+      "input": "HEPA滤网能不能洗？多久需要更换？",
+      "expected_output": "回答应说明 HEPA 滤网可定期清洗并阴凉晾干、不可暴晒，同时应提到大致更换周期约为 3 到 6 个月。",
+      "actual_output": "",
+      "category": "CONSUMABLES",
+      "case_type": "exact_spec",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4116,
+      "judge_latency_ms": 0,
+      "latency_ms": 4116,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "TROUBLESHOOTING-001",
+      "input": "机器人开机后立刻自动关机，常见原因是什么？",
+      "expected_output": "回答应提到电池电量耗尽、机身过热或电池鼓包等可能原因，并给出充电、冷却或更换电池等处理方向。",
+      "actual_output": "",
+      "category": "TROUBLESHOOTING",
+      "case_type": "symptom_search",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4141,
+      "judge_latency_ms": 0,
+      "latency_ms": 4141,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "TROUBLESHOOTING-002",
+      "input": "机器人清扫时总是频繁撞家具，应该重点检查什么？",
+      "expected_output": "回答应提到清洁避障摄像头或传感器、防撞条是否卡顿或回弹异常，并可配合清理周围障碍物。",
+      "actual_output": "",
+      "category": "TROUBLESHOOTING",
+      "case_type": "symptom_search",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4171,
+      "judge_latency_ms": 0,
+      "latency_ms": 4171,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "ALARM-001",
+      "input": "出现“电池故障”报警时应该怎么处理？",
+      "expected_output": "回答应提到先关闭电源并重新插拔电池，如果仍然报警，应联系售后检测或更换电池。",
+      "actual_output": "",
+      "category": "ALARM",
+      "case_type": "symptom_search",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4172,
+      "judge_latency_ms": 0,
+      "latency_ms": 4172,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "MOPPING-001",
+      "input": "水箱里加清洁液应该怎么配比？",
+      "expected_output": "回答应说明优先使用机型专用清洁液，并按大约 1:100 与清水混合，不应直接加入高浓度清洁液。",
+      "actual_output": "",
+      "category": "MOPPING",
+      "case_type": "exact_spec",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4150,
+      "judge_latency_ms": 0,
+      "latency_ms": 4150,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "MOPPING-002",
+      "input": "我不想让机器人在地毯上拖地，应该怎么设置？",
+      "expected_output": "回答应提到可在 APP 中把地毯区域设置为禁拖区，或依赖拖布抬升功能，使机器人在地毯区域只扫不拖。",
+      "actual_output": "",
+      "category": "MOPPING",
+      "case_type": "configuration",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4132,
+      "judge_latency_ms": 0,
+      "latency_ms": 4132,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "MAINTENANCE-001",
+      "input": "机器人如果要长期存放，应该怎么保养？",
+      "expected_output": "回答应提到存放前清洁机身和配件、扫拖机型需排空水箱，电池保留约 80% 到 90% 电量，放在阴凉干燥处，并定期补电。",
+      "actual_output": "",
+      "category": "MAINTENANCE",
+      "case_type": "maintenance",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4101,
+      "judge_latency_ms": 0,
+      "latency_ms": 4101,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "MAINTENANCE-002",
+      "input": "清洁机器人时能不能直接用水冲洗机身？",
+      "expected_output": "回答应明确说明不能直接冲洗或浸泡机身，清洁时应断电并用干布或微湿软布擦拭。",
+      "actual_output": "",
+      "category": "MAINTENANCE",
+      "case_type": "maintenance",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4144,
+      "judge_latency_ms": 0,
+      "latency_ms": 4144,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "BUYING-001",
+      "input": "带宠物的家庭选扫地机器人，应该优先看哪些能力？",
+      "expected_output": "回答应提到更强吸力、防毛发缠绕主刷或宠物模式，并可提及除味、避障能力或宠物家庭耗材更换频率更高。",
+      "actual_output": "",
+      "category": "BUYING",
+      "case_type": "comparison",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4132,
+      "judge_latency_ms": 0,
+      "latency_ms": 4132,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "name": "BUYING-002",
+      "input": "家里既有木地板又有地毯，选扫拖机器人要看什么配置？",
+      "expected_output": "回答应提到木地板需要可调低出水量或拖布抬升，地毯场景需要更强吸力或地毯增压，并兼顾越障和地面适配能力。",
+      "actual_output": "",
+      "category": "BUYING",
+      "case_type": "comparison",
+      "tier": "15",
+      "folder": "default",
+      "status": "ERROR",
+      "passed": false,
+      "response_mode": "error",
+      "composite_score": 0.0,
+      "hallucination_penalty": 1.0,
+      "response_latency_ms": 4147,
+      "judge_latency_ms": 0,
+      "latency_ms": 4147,
+      "search_results": [],
+      "retrieval_context": [],
+      "eval_context": [],
+      "dimension_scores": {
+        "tool_selection": 0.0,
+        "parameter_accuracy": 0.0,
+        "recall_completeness": 0.0,
+        "answer_accuracy": 0.0,
+        "safety_routing": 0.0
+      },
+      "metric_results": {},
+      "error": "stream=[WinError 10061] 由于目标计算机积极拒绝，无法连接。; search=[WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    }
+  ]
+}

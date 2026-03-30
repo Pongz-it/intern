@@ -1,0 +1,380 @@
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    
+    <!-- Title -->
+    <mxCell id="title" value="Agent RAG System Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+      <mxGeometry x="400" y="20" width="400" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Layer 1: User Interface Layer -->
+    <mxCell id="layer1-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="40" y="80" width="1120" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="layer1-label" value="User Interface Layer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#1565c0;" vertex="1" parent="1">
+      <mxGeometry x="50" y="85" width="200" height="25" as="geometry"/>
+    </mxCell>
+    
+    <!-- API Endpoints -->
+    <mxCell id="api-chat" value="Chat API&#xa;/chat" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1976d2;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="80" y="115" width="120" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="api-research" value="Deep Research API&#xa;/research" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1976d2;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="220" y="115" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="api-ingest" value="Ingestion API&#xa;/ingest" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1976d2;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="380" y="115" width="120" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="api-search" value="Search API&#xa;/search" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1976d2;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="520" y="115" width="120" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Layer 2: Agent Layer -->
+    <mxCell id="layer2-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="40" y="200" width="1120" height="130" as="geometry"/>
+    </mxCell>
+    <mxCell id="layer2-label" value="Agent Layer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#2e7d32;" vertex="1" parent="1">
+      <mxGeometry x="50" y="205" width="200" height="25" as="geometry"/>
+    </mxCell>
+    
+    <!-- Chat Agent -->
+    <mxCell id="chat-agent" value="ChatAgent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;fontStyle=1;fontSize=12;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+      <mxGeometry x="80" y="235" width="140" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="chat-agent-detail" value="• run() / run_stream()&#xa;• Tool execution loop&#xa;• Citation building" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="85" y="260" width="130" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Deep Research Orchestrator -->
+    <mxCell id="dr-orchestrator" value="DeepResearch Orchestrator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+      <mxGeometry x="240" y="235" width="150" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="dr-detail" value="• Multi-cycle research&#xa;• Sub-question generation&#xa;• Parallel agent execution" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="245" y="260" width="140" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Research Agent -->
+    <mxCell id="research-agent" value="ResearchAgent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;fontStyle=1;fontSize=12;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+      <mxGeometry x="410" y="235" width="140" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="ra-detail" value="• Tool-based research&#xa;• Finding compilation&#xa;• Key fact extraction" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="415" y="260" width="130" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Report Generator -->
+    <mxCell id="report-gen" value="ReportGenerator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;fontStyle=1;fontSize=12;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+      <mxGeometry x="570" y="235" width="140" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="rg-detail" value="• Structured reports&#xa;• Key findings extraction&#xa;• Streaming output" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="575" y="260" width="130" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Base Agent -->
+    <mxCell id="base-agent" value="BaseAgent (Abstract)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#388e3c;fontStyle=1;fontSize=11;dashed=1;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="730" y="255" width="130" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Layer 3: Tools Layer -->
+    <mxCell id="layer3-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ef6c00;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="40" y="350" width="1120" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="layer3-label" value="Tools Layer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#ef6c00;" vertex="1" parent="1">
+      <mxGeometry x="50" y="355" width="200" height="25" as="geometry"/>
+    </mxCell>
+    
+    <!-- Tool Registry -->
+    <mxCell id="tool-registry" value="ToolRegistry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#f57c00;fontStyle=1;fontSize=11;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="80" y="385" width="100" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Search Tool -->
+    <mxCell id="search-tool" value="SearchTool&#xa;(RAG Search)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc80;strokeColor=#ff9800;fontStyle=1;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="200" y="385" width="110" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Web Search -->
+    <mxCell id="web-search" value="WebSearchTool&#xa;(Tavily)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc80;strokeColor=#ff9800;fontStyle=1;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="330" y="385" width="110" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Open URL Tool -->
+    <mxCell id="openurl-tool" value="OpenURLTool" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc80;strokeColor=#ff9800;fontStyle=1;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="460" y="385" width="100" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- MCP Provider -->
+    <mxCell id="mcp-provider" value="MCP Provider&#xa;(External Tools)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc80;strokeColor=#ff9800;fontStyle=1;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="580" y="385" width="110" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Tool Runner -->
+    <mxCell id="tool-runner" value="ToolRunner" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#f57c00;fontStyle=1;fontSize=11;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="710" y="385" width="100" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Layer 4: Core Services -->
+    <mxCell id="layer4-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#7b1fa2;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="40" y="470" width="540" height="130" as="geometry"/>
+    </mxCell>
+    <mxCell id="layer4-label" value="Core Services" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#7b1fa2;" vertex="1" parent="1">
+      <mxGeometry x="50" y="475" width="200" height="25" as="geometry"/>
+    </mxCell>
+    
+    <!-- LLM Interface -->
+    <mxCell id="llm-interface" value="LLM Interface" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#8e24aa;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+      <mxGeometry x="60" y="505" width="110" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="llm-detail" value="• chat() / chat_stream()&#xa;• Token counting&#xa;• LiteLLM Provider" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="65" y="530" width="100" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Embedder -->
+    <mxCell id="embedder" value="Embedder" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#8e24aa;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+      <mxGeometry x="190" y="505" width="110" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="embed-detail" value="• embed() / embed_batch()&#xa;• Query/Doc embedding&#xa;• LiteLLM Provider" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="195" y="530" width="100" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Citation Processor -->
+    <mxCell id="citation-proc" value="Citation Processor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#8e24aa;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+      <mxGeometry x="320" y="505" width="110" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="cite-detail" value="• Dynamic processing&#xa;• Stream token handling&#xa;• Citation extraction" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="325" y="530" width="100" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Config -->
+    <mxCell id="config" value="Config &amp; Models" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#8e24aa;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+      <mxGeometry x="450" y="505" width="110" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="config-detail" value="• Chunk, Section&#xa;• Message, Citation&#xa;• SearchResult" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="455" y="530" width="100" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Layer 5: Retrieval Layer -->
+    <mxCell id="layer5-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="600" y="470" width="560" height="130" as="geometry"/>
+    </mxCell>
+    <mxCell id="layer5-label" value="Retrieval &amp; Indexing Layer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#c2185b;" vertex="1" parent="1">
+      <mxGeometry x="610" y="475" width="200" height="25" as="geometry"/>
+    </mxCell>
+    
+    <!-- Retrieval Pipeline -->
+    <mxCell id="retrieval-pipeline" value="Retrieval Pipeline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8bbd9;strokeColor=#d81b60;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+      <mxGeometry x="620" y="505" width="110" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="ret-detail" value="• Multi-query retrieve&#xa;• Section expansion&#xa;• Deduplication" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="625" y="530" width="100" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Ranking -->
+    <mxCell id="ranking" value="Ranking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8bbd9;strokeColor=#d81b60;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+      <mxGeometry x="750" y="505" width="110" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="rank-detail" value="• RRF fusion&#xa;• Linear combination&#xa;• Reranking" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="755" y="530" width="100" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Document Index Interface -->
+    <mxCell id="doc-index" value="DocumentIndex" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8bbd9;strokeColor=#d81b60;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+      <mxGeometry x="880" y="505" width="120" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="idx-detail" value="• hybrid_search()&#xa;• semantic_search()&#xa;• keyword_search()" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="885" y="530" width="110" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Vespa Index -->
+    <mxCell id="vespa-index" value="VespaIndex" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f48fb1;strokeColor=#c2185b;fontStyle=1;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="1020" y="510" width="90" height="30" as="geometry"/>
+    </mxCell>
+    
+    <!-- Memory Index -->
+    <mxCell id="memory-index" value="MemoryIndex" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f48fb1;strokeColor=#c2185b;fontStyle=1;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="1020" y="550" width="90" height="30" as="geometry"/>
+    </mxCell>
+    
+    <!-- Layer 6: Ingestion Layer -->
+    <mxCell id="layer6-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f7fa;strokeColor=#00838f;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="40" y="620" width="1120" height="120" as="geometry"/>
+    </mxCell>
+    <mxCell id="layer6-label" value="Ingestion Pipeline (Hatchet Workflow)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#00838f;" vertex="1" parent="1">
+      <mxGeometry x="50" y="625" width="300" height="25" as="geometry"/>
+    </mxCell>
+    
+    <!-- Parsing -->
+    <mxCell id="parsing" value="Parsing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#0097a7;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=3;" vertex="1" parent="1">
+      <mxGeometry x="60" y="655" width="100" height="70" as="geometry"/>
+    </mxCell>
+    <mxCell id="parse-detail" value="PDF, DOCX, PPTX&#xa;XLSX, MD, URL" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="60" y="680" width="100" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- OCR -->
+    <mxCell id="ocr" value="OCR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#0097a7;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=3;" vertex="1" parent="1">
+      <mxGeometry x="180" y="655" width="100" height="70" as="geometry"/>
+    </mxCell>
+    <mxCell id="ocr-detail" value="Tesseract, AWS&#xa;Google, LLM" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="180" y="680" width="100" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Chunking -->
+    <mxCell id="chunking" value="Chunking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#0097a7;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=3;" vertex="1" parent="1">
+      <mxGeometry x="300" y="655" width="100" height="70" as="geometry"/>
+    </mxCell>
+    <mxCell id="chunk-detail" value="Text, Code&#xa;Table, Image" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="300" y="680" width="100" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Contextual RAG -->
+    <mxCell id="contextual-rag" value="Contextual RAG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#80deea;strokeColor=#00838f;fontStyle=1;fontSize=10;verticalAlign=top;spacingTop=3;" vertex="1" parent="1">
+      <mxGeometry x="420" y="655" width="100" height="70" as="geometry"/>
+    </mxCell>
+    <mxCell id="crag-detail" value="Doc Summary&#xa;Chunk Context" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="420" y="680" width="100" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Embedding -->
+    <mxCell id="embedding-ingest" value="Embedding" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#0097a7;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=3;" vertex="1" parent="1">
+      <mxGeometry x="540" y="655" width="100" height="70" as="geometry"/>
+    </mxCell>
+    <mxCell id="emb-detail" value="Title + Content&#xa;Mini-chunk" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="540" y="680" width="100" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Dedup -->
+    <mxCell id="dedup" value="Dedup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#0097a7;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=3;" vertex="1" parent="1">
+      <mxGeometry x="660" y="655" width="90" height="70" as="geometry"/>
+    </mxCell>
+    <mxCell id="dedup-detail" value="Hash-based&#xa;Detection" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="660" y="680" width="90" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Indexing -->
+    <mxCell id="indexing" value="Indexing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#0097a7;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=3;" vertex="1" parent="1">
+      <mxGeometry x="770" y="655" width="90" height="70" as="geometry"/>
+    </mxCell>
+    <mxCell id="index-detail" value="Batch Index&#xa;Vespa/Memory" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="770" y="680" width="90" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Storage -->
+    <mxCell id="storage" value="Storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#0097a7;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=3;" vertex="1" parent="1">
+      <mxGeometry x="880" y="655" width="90" height="70" as="geometry"/>
+    </mxCell>
+    <mxCell id="storage-detail" value="Blob Storage&#xa;Documents" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="880" y="680" width="90" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Flow arrows in ingestion -->
+    <mxCell id="flow1" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00838f;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="160" y="690" as="sourcePoint"/>
+        <mxPoint x="180" y="690" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="flow2" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00838f;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="280" y="690" as="sourcePoint"/>
+        <mxPoint x="300" y="690" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="flow3" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00838f;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="400" y="690" as="sourcePoint"/>
+        <mxPoint x="420" y="690" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="flow4" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00838f;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="520" y="690" as="sourcePoint"/>
+        <mxPoint x="540" y="690" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="flow5" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00838f;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="640" y="690" as="sourcePoint"/>
+        <mxPoint x="660" y="690" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="flow6" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00838f;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="750" y="690" as="sourcePoint"/>
+        <mxPoint x="770" y="690" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="flow7" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00838f;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="860" y="690" as="sourcePoint"/>
+        <mxPoint x="880" y="690" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    
+    <!-- External Systems -->
+    <mxCell id="ext-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#9e9e9e;strokeWidth=2;strokeDashArray=3 3;" vertex="1" parent="1">
+      <mxGeometry x="900" y="80" width="260" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="ext-label" value="External Systems" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#616161;" vertex="1" parent="1">
+      <mxGeometry x="910" y="85" width="150" height="25" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="llm-external" value="LLM APIs&#xa;(OpenAI, Claude...)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#9e9e9e;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="920" y="115" width="100" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="vespa-external" value="Vespa&#xa;Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#9e9e9e;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="1040" y="115" width="100" height="50" as="geometry"/>
+    </mxCell>
+    
+    <!-- Legend -->
+    <mxCell id="legend-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#bdbdbd;strokeWidth=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="760" width="600" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend-title" value="Legend:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="770" width="60" height="30" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1976d2;" vertex="1" parent="1">
+      <mxGeometry x="110" y="777" width="16" height="16" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg1-t" value="API" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="130" y="773" width="35" height="24" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;" vertex="1" parent="1">
+      <mxGeometry x="170" y="777" width="16" height="16" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg2-t" value="Agent" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="190" y="773" width="40" height="24" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc80;strokeColor=#ff9800;" vertex="1" parent="1">
+      <mxGeometry x="235" y="777" width="16" height="16" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg3-t" value="Tool" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="255" y="773" width="35" height="24" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#8e24aa;" vertex="1" parent="1">
+      <mxGeometry x="295" y="777" width="16" height="16" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg4-t" value="Core" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="315" y="773" width="35" height="24" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8bbd9;strokeColor=#d81b60;" vertex="1" parent="1">
+      <mxGeometry x="355" y="777" width="16" height="16" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg5-t" value="Retrieval" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="375" y="773" width="55" height="24" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#0097a7;" vertex="1" parent="1">
+      <mxGeometry x="435" y="777" width="16" height="16" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg6-t" value="Ingestion" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="455" y="773" width="55" height="24" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg7" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#9e9e9e;" vertex="1" parent="1">
+      <mxGeometry x="515" y="777" width="16" height="16" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg7-t" value="External" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="535" y="773" width="50" height="24" as="geometry"/>
+    </mxCell>
+    
+  </root>
+</mxGraphModel>
